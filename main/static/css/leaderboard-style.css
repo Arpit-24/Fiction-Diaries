@@ -39,10 +39,10 @@
 	background-repeat: no-repeat;
 	background-position: center;
 }
-.dc-standalone-house-image{background-image: url(../media/dc-cards/dc-default.svg);}
-.marvel-standalone-house-image{background-image: url(../media/marvel-cards/marvel-default.svg);}
-.got-standalone-house-image{background-image: url(../media/got-cards/default.svg);}
-.hp-standalone-house-image{background-image: url(../media/hp-cards/hp-default.svg);}
+.dc-standalone-house-image{background-image: url(/static/media/dc-cards/dc-default.svg);}
+.marvel-standalone-house-image{background-image: url(/static/media/marvel-cards/marvel-default.svg);}
+.got-standalone-house-image{background-image: url(/static/media/got-cards/default.svg);}
+.hp-standalone-house-image{background-image: url(/static/media/hp-cards/hp-default.svg);}
 .dc-standalone-name-house-wrapper,.marvel-standalone-name-house-wrapper,.got-standalone-name-house-wrapper,.hp-standalone-name-house-wrapper  {
 	display: table-cell;
 	width: calc(100% - 16vw);
@@ -157,10 +157,10 @@ div.tab button.active {
 	background-repeat: no-repeat;
 	background-position: center;
 }
-.dc-individual-house-image{background-image: url(../media/dc-cards/dc-default.svg);}
-.marvel-individual-house-image {background-image: url(../media/marvel-cards/marvel-default.svg);}
-.got-individual-house-image{background-image: url(../media/got-cards/default.svg);}
-.hp-individual-house-image{background-image: url(../media/hp-cards/hp-default.svg);}
+.dc-individual-house-image{background-image: url(/static/media/dc-cards/dc-default.svg);}
+.marvel-individual-house-image {background-image: url(/static/media/marvel-cards/marvel-default.svg);}
+.got-individual-house-image{background-image: url(/static/media/got-cards/default.svg);}
+.hp-individual-house-image{background-image: url(/static/media/hp-cards/hp-default.svg);}
 .dc-name-house-wrapper,.marvel-name-house-wrapper,.got-name-house-wrapper,.hp-name-house-wrapper{
 	display: table-cell;
 	width: 100%;
@@ -230,10 +230,10 @@ div.tab button.active {
 	background-repeat: no-repeat;
 	background-position: center;
 }
-.dc-house-house-image{background-image: url(../media/dc-cards/dc-default.svg);}
-.marvel-house-house-image{background-image: url(../media/marvel-cards/marvel-default.svg);}
-.got-house-house-image{background-image: url(../media/got-cards/default.svg);}
-.hp-house-house-image{background-image: url(../media/hp-cards/hp-default.svg);}
+.dc-house-house-image{background-image: url(/static/media/dc-cards/dc-default.svg);}
+.marvel-house-house-image{background-image: url(/static/media/marvel-cards/marvel-default.svg);}
+.got-house-house-image{background-image: url(/static/media/got-cards/default.svg);}
+.hp-house-house-image{background-image: url(/static/media/hp-cards/hp-default.svg);}
 .dc-house-name-house-wrapper,.marvel-house-name-house-wrapper,.got-house-name-house-wrapper,.hp-house-name-house-wrapper {
 	display: table-cell;
 	width: 100%;

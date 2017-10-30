@@ -27,7 +27,48 @@
 		<script type="text/javascript">
 			new WOW().init();
 		</script>
-
+<style type="text/css">@font-face{
+          font-family: "GOT";
+          src: url("{% static '/media/Fonts/GOT.ttf' %}") format('truetype');
+      }
+       @font-face{
+          font-family: "HP";
+          src: url("{% static '/media/Fonts/HP.ttf' %}") format('truetype');
+      }
+      @font-face{
+          font-family: "MV";
+          src: url("{% static '/media/Fonts/Marv.ttf' %}") format('truetype');
+      }
+            #s1{
+                margin-top: 2vh;
+          font-family: 'GOT';
+          color: Black;
+          font-size: 2em;
+      }
+      #s2{
+          margin-top: 2vh;
+          font-family: 'HP';
+          color: #50a6b4;
+          font-size: 2em;
+          
+      }
+       #s3{
+           margin-top: 2vh;
+          font-family: 'MV';
+          color: #ed1f23;
+          font-size: 2em;
+          
+      }
+      #s4{
+          margin-top: 2vh;
+          font-family: 'MV';
+          color: #f2efdb;
+          font-size: 2em;
+          
+      }
+            .swiper-container{
+                text-align: center;
+            }</style>
 	</head>
 
 	<body>
@@ -35,10 +76,10 @@
 			<!-- CARDS ABOVE MENU -->
 			<div class="swiper-container card home-swiper-container">
 	    			<div class="swiper-wrapper home-swiper-wrapper">
-	      				<div id="0" class="swiper-slide home-swiper-slide" style="background-image:url({% static 'media/GOT/Got.png' %}); "></div>
-	      				<div id="1" class="swiper-slide home-swiper-slide" style="background-image:url({% static 'media/HP/hp-card.svg' %}),url({% static 'media/HP/card.png' %});"></div>
-	        			<div id="2" class="swiper-slide home-swiper-slide" style="background-image:url({% static 'media/Marvel/Anti.svg' %});"></div>
-	        			<div id="3" class="swiper-slide home-swiper-slide" style="background-image:url({% static 'media/DC/DC_card.svg' %});background-size: cover;"></div>
+	      				<div id="0" class="swiper-slide home-swiper-slide" style="background-image:url('/static/media/GOT/Got.png'); "><p id="s1"> Swipe and Choose </p></div>
+	      				<div id="1" class="swiper-slide home-swiper-slide" style="background-image:url('/static/media/HP/hp-card.svg'),url('media/HP/card.png'); " ><p id="s2"> Swipe and Choose</p></div>
+	        			<div id="2" class="swiper-slide home-swiper-slide" style="background-image:url('/static/media/Marvel/Anti.svg'); "><p id="s3"> Swipe and Choose </p></div>
+	        			<div id="3" class="swiper-slide home-swiper-slide" style="background-image:url('/static/media/DC/DC_card.svg');  background-size: cover; "><p id="s4"> Swipe and Choose</p></div>
 	    			</div>
 	    	</div>
 	    	<div class="game-0" id="GOT">
@@ -48,7 +89,7 @@
 	    		<div id="got-div" class="ingame-0">
 	    			<div id="body-got">
 				   		<center><div id="dropdown" class="got-drop-bhawan">
-				  			<button type="button" onclick="myFunction()" class="dropbtn" id="b1">Selecting Bhawan</button>
+				  			<button type="button" onclick="myFunction()" class="dropbtn" id="b1">Select Bhawan</button>
 				  		<div id="myDropdown" class="dropdown-content">
 				  			<div id="wrapper-got">
 				   		<a href="javascript:selectF(1)">Ashok Bhawan</a>
@@ -167,7 +208,13 @@
 					</g>
 					</svg>
 	    		</div>
-	    		<div id="hp-div" class="ingame-1"></div>
+	    		<div id="hp-div" class="ingame-1">
+ <div class="hp-sort">
+ <img class="hp-hat" src="{% static 'media/HP/Hat.svg' %}"/>
+ <img class="hp-housecard" src=""/>
+ <img class="hp-specs" src="{% static 'media/HP/specs.svg' %}"/>
+    <div class="hp-sort-btn" onclick="{hp_sort();}">SORT ME</div>
+	    		</div>
 	    	</div>
 	    	<div class="game-2" id="MARV">
 	    <!-- Marvel Loader -->
@@ -374,9 +421,14 @@
     	<!-- INITIALLY EMPTY MESSAGE -->
     		<div class="message-home">
     			<div class="message-title">
-    				Title
+    				Confirm Selection
     			</div>
     			<div class="message-content">
+    				<div id="game-ins-1"></div>
+    				<div id="game-ins-2"></div>
+    				<div id="game-ins-3"></div>
+    				<div id="game-ins-4"></div>
+    				<div id="game-ins-5"></div>
     			</div>
     		</div>
     	<!-- GOT QUES DIV -->

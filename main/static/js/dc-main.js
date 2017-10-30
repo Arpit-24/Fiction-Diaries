@@ -28,17 +28,17 @@ function load_dc_images() {
 	var dc_queue = new createjs.LoadQueue(false);
 	dc_queue.on("complete", dc_handleComplete, this);
 	dc_queue.loadManifest([
-		"./media/dc-cards/Aquaman-logo.svg",
-		"./media/dc-cards/Batman-logo.svg",
-		"./media/dc-cards/Flash-logo.svg",
-		"./media/dc-cards/Lantern-logo.svg",
-		"./media/dc-cards/Superman-logo.svg",
-		"./media/dc-cards/Wonder-woman-logo.svg",
-		"./media/dc-cards/dc-default.svg",
-		"./media/chatbox.svg",
-		"./media/chatbox-right.svg",
-		"./media/step-face.svg",
-		"./media/unknown.svg"
+		"/static/media/dc-cards/Aquaman-logo.svg",
+		"/static/media/dc-cards/Batman-logo.svg",
+		"/static/media/dc-cards/Flash-logo.svg",
+		"/static/media/dc-cards/Lantern-logo.svg",
+		"/static/media/dc-cards/Superman-logo.svg",
+		"/static/media/dc-cards/Wonder-woman-logo.svg",
+		"/static/media/dc-cards/dc-default.svg",
+		"/static/media/chatbox.svg",
+		"/static/media/chatbox-right.svg",
+		"/static/media/step-face.svg",
+		"/static/media/unknown.svg"
 	]);
 	function dc_handleComplete() {
 		loaded=1;

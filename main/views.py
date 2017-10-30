@@ -168,158 +168,178 @@ def answer(request, variable):
 	else:
 		return HttpResponseRedirect('/')
 
-def leaderboard(request,variable):
-	if variable == '0':
-		w,h = 7,2
-		arr = [[0 for x in range(w)] for y in range(h)]
-		GOT_player_leaderboard = GOT_Player.objects.order_by('player_score').reverse()
-		username = ["" for x in range(10)]
-		indivisual_score = [0 for i in range(10)]
-		houses = ["" for x in range(10)]
-		for i in range(10):
-			username[i] = GOT_player_leaderboard[i].user.username
-			indivisual_score[i] = GOT_player_leaderboard[i].player_score
-			houses[i] = GOT_player_leaderboard[i].house
+def leaderboard(request, variable):
+    if variable == '0':
+        w, h = 8, 2
+        arr = [[0 for x in range(h)] for y in range(w)]
+        GOT_player_leaderboard = GOT_Player.objects.order_by('player_score').reverse()
+        username = [" " for i in range(10)]
+        indivisual_score = [0 for i in range(10)]
+        houses = [" " for i in range(10)]
+        i=0
+        for player in GOT_player_leaderboard:
+            if i==10:
+                break
+            indivisual_score[i] = (GOT_player_leaderboard[i].player_score)
+            username[i] = (GOT_player_leaderboard[i].user.username)
+            houses[i] = (GOT_player_leaderboard[i].house)
+            i+=1
 
-		for i,k in GOT_Player.house_CHOICES :
-			arr[i][0] = i
-			q = GOT_Player.objects.filter(house=i)
-			for t in q:
-				indivisual_score += t.player_score
-				arr[i][1] = indivisual_score
+        for i, k in GOT_Player.house_CHOICES:
+            arr[i][0] = i
+            q = GOT_Player.objects.filter(house=i)
+            score=0
+            for t in q:
+                score += t.player_score
+            arr[i][1] = score
 
-		for j in range(6):
-			if arr[j][1]>arr[j+1][1]:
-				temp1 = arr[j][1]
-				arr[j][1]=arr[j+1][1]
-				arr[j+1][1]=temp1
-				temp2 = arr[j][0]
-				arr[j][0] = arr[j+1][0]
-				arr[j+1][0]=temp2
+        for j in range(7):
+            if arr[j][1] > arr[j + 1][1]:
+                temp1 = arr[j][1]
+                arr[j][1] = arr[j + 1][1]
+                arr[j + 1][1] = temp1
+                temp2 = arr[j][0]
+                arr[j][0] = arr[j + 1][0]
+                arr[j + 1][0] = temp2
 
-		p = GOT_Player.objects.filter(user = request.user)
-		current_user = list()
-		current_user.append(p.user.username)
-		current_user.append(p.rank)
-		current_user.append(p.house)
-		current_user.append(p.player_score)
+        p = GOT_Player.objects.get(user=request.user)
+        current_user = list()
+        current_user.append(request.user.username)
+        current_user.append(p.rank)
+        current_user.append(p.house)
+        current_user.append(p.player_score)
 
-		resp = {'username': username,'score': indivisual_score,'house':houses,'house_leaderboard':arr,'current_user':current_user}
-		return JsonResponse(resp)
+        resp = {'username': username, 'score': indivisual_score, 'house': houses, 'house_leaderboard': arr,
+                'current_user': current_user}
+        return JsonResponse(resp)
 
-	if variable == '1':
-		w,h = 7,2
-		arr = [[0 for x in range(w)] for y in range(h)]
-		HP_player_leaderboard = HP_Player.objects.order_by('player_score').reverse()
-		username = ["" for x in range(10)]
-		indivisual_score = [0 for i in range(10)]
-		houses = ["" for x in range(10)]
-		for i in range(10):
-			username[i] = HP_player_leaderboard[i].user.username
-			indivisual_score[i] = HP_player_leaderboard[i].player_score
-			houses[i] = HP_player_leaderboard[i].house
+    if variable == '1':
+        w, h = 4,2
+        arr = [[0 for x in range(h)] for y in range(w)]
+        HP_player_leaderboard = HP_Player.objects.order_by('player_score').reverse()
+        username = ["" for x in range(10)]
+        indivisual_score = [0 for i in range(10)]
+        houses = ["" for x in range(10)]
+        i=0
+        for player in HP_player_leaderboard:
+            if i==10:
+                break
+            indivisual_score[i] = (HP_player_leaderboard[i].player_score)
+            username[i] = (HP_player_leaderboard[i].user.username)
+            houses[i] = (HP_player_leaderboard[i].house)
+            i+=1
+        for i, k in HP_Player.house_CHOICES:
+            arr[i][0] = i
+            q = HP_Player.objects.filter(house=i)
+            for t in q:
+                indivisual_score += t.player_score
+                arr[i][1] = indivisual_score
 
-		for i,k in HP_Player.house_CHOICES :
-			arr[i][0] = i
-			q = HP_Player.objects.filter(house=i)
-			for t in q:
-				indivisual_score += t.player_score
-				arr[i][1] = indivisual_score
+        for j in range(3):
+            if arr[j][1] > arr[j + 1][1]:
+                temp1 = arr[j][1]
+                arr[j][1] = arr[j + 1][1]
+                arr[j + 1][1] = temp1
+                temp2 = arr[j][0]
+                arr[j][0] = arr[j + 1][0]
+                arr[j + 1][0] = temp2
 
-		for j in range(6):
-			if arr[j][1]>arr[j+1][1]:
-				temp1 = arr[j][1]
-				arr[j][1]=arr[j+1][1]
-				arr[j+1][1]=temp1
-				temp2 = arr[j][0]
-				arr[j][0] = arr[j+1][0]
-				arr[j+1][0]=temp2
+        p = HP_Player.objects.get(user=request.user)
+        current_user = list()
+        current_user.append(p.user.username)
+        current_user.append(p.rank)
+        current_user.append(p.house)
+        current_user.append(p.player_score)
 
-		p = HP_Player.objects.filter(user = request.user)
-		current_user = list()
-		current_user.append(p.user.username)
-		current_user.append(p.rank)
-		current_user.append(p.house)
-		current_user.append(p.player_score)
+        resp = {'username': username, 'score': indivisual_score, 'house': houses, 'house_leaderboard': arr,
+                'current_user': current_user}
+        return JsonResponse(resp)
 
-		resp = {'username': username,'score': indivisual_score,'house':houses,'house_leaderboard':arr,'current_user':current_user}
-		return JsonResponse(resp)
+    if variable == '2':
+        w, h = 6, 2
+        arr = [[0 for x in range(h)] for y in range(w)]
+        MARVEL_player_leaderboard = MARVEL_Player.objects.order_by('player_score').reverse()
+        username = ["" for x in range(10)]
+        indivisual_score = [0 for i in range(10)]
+        houses = ["" for x in range(10)]
+        i=0
+        for player in MARVEL_player_leaderboard:
+            if i==10:
+                break
+            username[i] = MARVEL_player_leaderboard[i].user.username
+            indivisual_score[i] = MARVEL_player_leaderboard[i].player_score
+            houses[i] = MARVEL_player_leaderboard[i].house
+            i+=1
 
-	if variable =='2':
-		w,h = 7,2
-		arr = [[0 for x in range(w)] for y in range(h)]
-		MARVEL_player_leaderboard = MARVEL_Player.objects.order_by('player_score').reverse()
-		username = ["" for x in range(10)]
-		indivisual_score = [0 for i in range(10)]
-		houses = ["" for x in range(10)]
-		for i in range(10):
-			username[i] = MARVEL_player_leaderboard[i].user.username
-			indivisual_score[i] = MARVEL_player_leaderboard[i].player_score
-			houses[i] = MARVEL_player_leaderboard[i].house
+        for i, k in MARVEL_Player.house_CHOICES:
+            arr[i][0] = i
+            q = MARVEL_Player.objects.filter(house=i)
+            for t in q:
+                indivisual_score += t.player_score
+                arr[i][1] = indivisual_score
 
-		for i,k in MARVEL_Player.house_CHOICES :
-			arr[i][0] = i
-			q = MARVEL_Player.objects.filter(house=i)
-			for t in q:
-				indivisual_score += t.player_score
-				arr[i][1] = indivisual_score
+        for j in range(5):
+            if arr[j][1] > arr[j + 1][1]:
+                temp1 = arr[j][1]
+                arr[j][1] = arr[j + 1][1]
+                arr[j + 1][1] = temp1
+                temp2 = arr[j][0]
+                arr[j][0] = arr[j + 1][0]
+                arr[j + 1][0] = temp2
 
-		for j in range(6):
-			if arr[j][1]>arr[j+1][1]:
-				temp1 = arr[j][1]
-				arr[j][1]=arr[j+1][1]
-				arr[j+1][1]=temp1
-				temp2 = arr[j][0]
-				arr[j][0] = arr[j+1][0]
-				arr[j+1][0]=temp2
+        p = MARVEL_Player.objects.get(user=request.user)
+        current_user = list()
+        current_user.append(p.user.username)
+        current_user.append(p.rank)
+        current_user.append(p.house)
+        current_user.append(p.player_score)
 
-		p = MARVEL_Player.objects.filter(user = request.user)
-		current_user = list()
-		current_user.append(p.user.username)
-		current_user.append(p.rank)
-		current_user.append(p.house)
-		current_user.append(p.player_score)
+        resp = {'username': username, 'score': indivisual_score, 'house': houses, 'house_leaderboard': arr,
+                'current_user': current_user}
+        return JsonResponse(resp)
 
-		resp = {'username': username,'score': indivisual_score,'house':houses,'house_leaderboard':arr,'current_user':current_user}
-		return JsonResponse(resp)
+    if variable == '3':
+        w, h = 6, 2
+        arr = [[0 for x in range(h)] for y in range(w)]
+        DC_player_leaderboard = DC_Player.objects.order_by('player_score').reverse()
+        username = ["" for x in range(10)]
+        indivisual_score = [0 for i in range(10)]
+        houses = ["" for x in range(10)]
+        i=0
+        for player in DC_player_leaderboard:
+            if i==10:
+                break
+            username[i] = DC_player_leaderboard[i].user.username
+            indivisual_score[i] = DC_player_leaderboard[i].player_score
+            houses[i] = DC_player_leaderboard[i].house
+            i+=1
 
-	if variable == '3':
-		w,h = 7,2
-		arr = [[0 for x in range(w)] for y in range(h)]
-		DC_player_leaderboard = DC_Player.objects.order_by('player_score').reverse()
-		username = ["" for x in range(10)]
-		indivisual_score = [0 for i in range(10)]
-		houses = ["" for x in range(10)]
-		for i in range(10):
-			username[i] = DC_player_leaderboard[i].user.username
-			indivisual_score[i] = DC_player_leaderboard[i].player_score
-			houses[i] = DC_player_leaderboard[i].house
+        for i, k in DC_Player.house_CHOICES:
+            arr[i][0] = i
+            q = DC_Player.objects.filter(house=i)
+            for t in q:
+                indivisual_score += t.player_score
+                arr[i][1] = indivisual_score
 
-		for i,k in DC_Player.house_CHOICES :
-			arr[i][0] = i
-			q = DC_Player.objects.filter(house=i)
-			for t in q:
-				indivisual_score += t.player_score
-				arr[i][1] = indivisual_score
+        for j in range(5):
+            if arr[j][1] > arr[j + 1][1]:
+                temp1 = arr[j][1]
+                arr[j][1] = arr[j + 1][1]
+                arr[j + 1][1] = temp1
+                temp2 = arr[j][0]
+                arr[j][0] = arr[j + 1][0]
+                arr[j + 1][0] = temp2
 
-		for j in range(6):
-			if arr[j][1]>arr[j+1][1]:
-				temp1 = arr[j][1]
-				arr[j][1]=arr[j+1][1]
-				arr[j+1][1]=temp1
-				temp2 = arr[j][0]
-				arr[j][0] = arr[j+1][0]
-				arr[j+1][0]=temp2
+        p = DC_Player.objects.get(user=request.user)
+        current_user = list()
+        current_user.append(p.user.username)
+        current_user.append(p.rank)
+        current_user.append(p.house)
+        current_user.append(p.player_score)
 
-		p = DC_Player.objects.filter(user = request.user)
-		current_user = list()
-		current_user.append(p.user.username)
-		current_user.append(p.rank)
-		current_user.append(p.house)
-		current_user.append(p.player_score)
-
-		resp = {'username': username,'score': indivisual_score,'house':houses,'house_leaderboard':arr,'current_user':current_user}
-		return JsonResponse(resp)
+        resp = {'username': username, 'score': indivisual_score, 'house': houses, 'house_leaderboard': arr,
+                'current_user': current_user}
+        return JsonResponse(resp)
 
 
 

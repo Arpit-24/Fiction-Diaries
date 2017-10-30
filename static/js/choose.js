@@ -55,10 +55,10 @@ function card(){
     document.getElementById("body-got").style.position="absolute";
     var oi=setInterval(function check_bhawan(){
     if(check==1) {
-        document.getElementById("last").classList.remove("final");document.getElementById("last").src="./media/GOT/Cards/"+bhawan_select+".svg";
+        document.getElementById("last").classList.remove("final");document.getElementById("last").src="/static/media/GOT/Cards/"+bhawan_select+".svg";
         el("navign-got")[0].style.display="none";
         el("navign-play")[0].style.display="flex";
-        setTimeout(show_ques_div(0),2000);clearTimeout(oi);}
+        setTimeout(show_ques_div(0),5000);clearTimeout(oi);}
     },1000);
 }
 
@@ -81,7 +81,7 @@ alert("1");
     document.getElementById("body-got").style.position="absolute";
   
     document.getElementById("last").classList.remove("final");
-    document.getElementById("last").src="./media/GOT/Cards/gotend.svg";
+    document.getElementById("last").src="/static/media/GOT/Cards/gotend.svg";
         },5000); 
         }
         else{
@@ -93,7 +93,7 @@ alert("1");
     document.getElementById("body-got").style.position="absolute";
 
     document.getElementById("last").classList.remove("final");
-    document.getElementById("last").src="./media/GOT/Cards/gotend.svg";
+    document.getElementById("last").src="/static/media/GOT/Cards/gotend.svg";
     el("navign-got")[0].style.display="none";
     el("navign-play")[0].style.display="flex";}
 }

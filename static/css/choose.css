@@ -163,7 +163,7 @@
 
 @media only screen and (min-width: 600px) {
     #body-got {
-        background-image: url(../media/GOT/Dani-1.svg);
+        background-image: url(/static/media/GOT/Dani-1.svg);
         background-repeat: no-repeat;
         background-size: 100%;
         width: 100%;
@@ -185,7 +185,7 @@
 }
 @media only screen and (max-width: 600px) {
     #body-got {
-        background-image: url(../media/GOT/Dani.svg);
+        background-image: url(/static/media/GOT/Dani.svg);
         background-repeat: no-repeat;
         background-size: 100%;
     }

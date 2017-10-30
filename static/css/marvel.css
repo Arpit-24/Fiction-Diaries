@@ -16,7 +16,7 @@ body, html {
 	position: fixed;
 	bottom: 8vh;
 	left: 0;
-	background-image: url(../media/nick.svg);
+	background-image: url(/static/media/nick.svg);
 	background-size: 100% 100%;
 	display: none;
 }
@@ -27,7 +27,7 @@ body, html {
 	position: fixed;
 	top: 32vh;
 	left: 0;
-	background-image: url(../media/chatbox.svg);
+	background-image: url(/static/media/chatbox.svg);
 	background-size: 100% 100%;
 	display: none;
 }
@@ -116,7 +116,7 @@ body, html {
 	position: fixed;
 	bottom: 8vh;
 	right: 0;
-	background-image: url(../media/unknown.svg);
+	background-image: url(/static/media/unknown.svg);
 	background-size: 100% 100%;
 	display: none;
 }
@@ -126,7 +126,7 @@ body, html {
 	position: fixed;
 	bottom: 8vh;
 	right: 0;
-	background-image: url(../media/cards/magneto.svg);
+	background-image: url(/static/media/cards/magneto.svg);
 	background-size: 100% 100%;
 	display: none;
 }
@@ -136,7 +136,7 @@ body, html {
 	position: fixed;
 	bottom: 8vh;
 	right: 0;
-	background-image: url(../media/cards/doom.svg);
+	background-image: url(/static/media/cards/doom.svg);
 	background-size: 100% 100%;
 	display: none;
 }
@@ -146,7 +146,7 @@ body, html {
 	position: fixed;
 	bottom: 8vh;
 	right: 0;
-	background-image: url(../media/cards/kingpin.svg);
+	background-image: url(/static/media/cards/kingpin.svg);
 	background-size: 100% 100%;
 	display: none;
 }
@@ -156,7 +156,7 @@ body, html {
 	position: fixed;
 	bottom: 8vh;
 	right: 0;
-	background-image: url(../media/cards/thanos.svg);
+	background-image: url(/static/media/cards/thanos.svg);
 	background-size: 100% 100%;
 	display: none;
 }
@@ -166,7 +166,7 @@ body, html {
 	position: fixed;
 	bottom: 8vh;
 	right: 0;
-	background-image: url(../media/cards/redskull.svg);
+	background-image: url(/static/media/cards/redskull.svg);
 	background-size: 100% 100%;
 	display: none;
 }
@@ -176,7 +176,7 @@ body, html {
 	position: fixed;
 	bottom: 8vh;
 	right: 0;
-	background-image: url(../media/cards/venom.svg);
+	background-image: url(/static/media/cards/venom.svg);
 	background-size: 100% 100%;
 	display: none;
 }
@@ -187,7 +187,7 @@ body, html {
 	position: fixed;
 	top: 32vh;
 	right: 0;
-	background-image: url(../media/chatbox-right.svg);
+	background-image: url(/static/media/chatbox-right.svg);
 	background-size: 100% 100%;
 	display: none;
 }
@@ -211,27 +211,27 @@ body, html {
 	width: 30vw;
 }
 #magneto {
-	background-image: url(../media/cards/magneto.svg);
+	background-image: url(/static/media/cards/magneto.svg);
 	background-size: 100% 100%;
 }
 #doom {
-	background-image: url(../media/cards/doom.svg);
+	background-image: url(/static/media/cards/doom.svg);
 	background-size: 100% 100%;
 }
 #kingpin {
-	background-image: url(../media/cards/kingpin.svg);
+	background-image: url(/static/media/cards/kingpin.svg);
 	background-size: 100% 100%;
 }
 #thanos {
-	background-image: url(../media/cards/thanos.svg);
+	background-image: url(/static/media/cards/thanos.svg);
 	background-size: 100% 100%;
 }
 #redskull {
-	background-image: url(../media/cards/redskull.svg);
+	background-image: url(/static/media/cards/redskull.svg);
 	background-size: 100% 100%;
 }
 #venom {
-	background-image: url(../media/cards/venom.svg);
+	background-image: url(/static/media/cards/venom.svg);
 	background-size: 100% 100%;
 }
 

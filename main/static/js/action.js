@@ -4,7 +4,12 @@ var game_info_title=["GOT QUIZ","HP QUIZ","MARVEL QUIZ","DC QUIZ"];
 var game_states=[0,0,0,0];
 var character=[-1,-1,-1,-1];
 var loaded;
+var ins=[["1) You are assigned a House based on the Bhawan you are in. All points you earn are added to the House's total to determine Top performing House.","2) There are 30 Randomly Selected Multiple Choice Questions to be answered.","3) Click on the option to select the answer and click Submit to submit the Answer.","4) Each Correct Answer will fetch you and your House 100 points. There will be no points deducted for Wrong Answers.","5) You can check your points and leaderboard's anytime by clicking on the Leaderboard option below."],
+            ["1) You are assigned a House randomly. All points you earn are added to the House's total to determine Top performing House.","2) There are 30 Randomly Selected Multiple Choice Questions to be answered.","3) Click on the Radio Button next to an option to select the answer and click Submit to submit the Answer.","4) Each Correct Answer will fetch you and your House 100 points. There will be no points deducted for Wrong Answers.","5) You can check your points and leaderboard's anytime by clicking on the Leaderboard option below."],
+            ["1) Choose your favourite Supervillain and show the Heroes how awesome Your skills are. All points you earn are added to the Character's total to determine Top performing Character.","2) There are 30 Randomly Selected Multiple Choice Questions to be answered.","3) Click on the Radio Button next to an option to select the answer and click Submit to submit the Answer.","4) Each Correct Answer will fetch you and your Selected Character 100 points. There will be no points deducted for Wrong Answers.","5) You can check your points and leaderboard's anytime by clicking on the Leaderboard option below."],
+            ["1) Choose your favourite Superhero and defeat Steppenwolf from invading the Earth. All points you earn are added to the Character's total to determine Top performing Character.","2) There are 30 Randomly Selected Multiple Choice Questions to be answered.","3) Click on the Radio Button next to an option to select the answer and click Submit to submit the Answer.","4) Each Correct Answer will fetch you and your Selected Character 100 points. There will be no points deducted for Wrong Answers.","5) You can check your points and leaderboard's anytime by clicking on the Leaderboard option below."]];
 $(document).ready(function(){
+    document.getElementsByTagName('body')[0].style.overflow='hidden';
     main_load();
 });
 function main_load() {
@@ -22,6 +27,7 @@ function main_load() {
         "/static/media/DC/DC_card.svg",
     ]);
     function main_handleComplete() {
+        document.getElementById('load-body').style.display='none';
         document.getElementsByTagName('body')[0].style.overflow='auto';
         // Hide Main Loader
         // Display Swiper
@@ -39,7 +45,8 @@ function expand(b)
     el("message-home")[0].style.height="92vh";
     el("message-title")[0].style.display="flex";
     el("message-content")[0].style.display="flex";
-    c.style.opacity="0.8";
+    el("message-title")[0].innerHTML=game_info_title[game_index];
+    c.style.opacity="0.9";
 
 }
 function leadofgame()
@@ -94,8 +101,19 @@ function conftoload()
 
     el(currgame_class)[0].style.display="block";
     el(curringame_class)[0].style.display="none";
-
+el("message-title")[0].innerHTML="Title";
     setTimeout(load(game_index),5000);
+    var font;
+    if (game_index==0) {
+        font="GOT";
+    } else if (game_index==1) {
+        font="HP";
+    } else if (game_index==2) {
+        font="Marv";
+    } else {
+        font="Marv";
+    }
+    document.getElementsByTagName('body')[0].style.fontFamily=font;
 }
 function load(ind)
 {
@@ -132,8 +150,12 @@ function yes_loaded()
         else if (game_index==0 && check==2) {
             got_finished();
         }
-        else if(game_index==1)
-        {el(currgame_class)[0].style.display="flex"; map();el("navign-play")[0].style.display="flex";document.getElementsByTagName("body")[0].style.overflow="hidden";show_ques_div(1);}
+        else if(game_index==1 && hp_check==0)
+        {el(currgame_class)[0].style.display="flex"; el("navign-got")[0].style.display="flex";document.getElementsByTagName("body")[0].style.overflow="hidden";}
+        else if(game_index==1 && hp_check==1)
+            {el(currgame_class)[0].style.display="flex"; el("navign-play")[0].style.display="flex";document.getElementsByClassName("hp-sort")[0].style.display="none";map();document.getElementsByTagName("body")[0].style.overflow="hidden"; setTimeout( function(){show_ques_div(1);},2000);}
+        else if(game_index==1 && hp_check==2)
+        {el(currgame_class)[0].style.display="flex"; el("navign-play")[0].style.display="flex";document.getElementsByClassName("hp-sort")[0].style.display="none";map();document.getElementsByTagName("body")[0].style.overflow="hidden"; hp_finished();}
         //MARVEL
         else if(game_index==2)
         {do_marv(); update_marv(); }
@@ -214,7 +236,7 @@ function gametohome()
     el("message-home")[0].style.height="0vh";
     el("message-title")[0].style.display="none";
     el("message-content")[0].style.display="none";
-    el("message-title")[0].innerHTML="Title";
+    
 
     el(game_index+"-ques-box")[0].style.height="0vh";
     document.getElementsByClassName(game_index+"-ques-title")[0].style.display="none";
@@ -231,9 +253,12 @@ function insofgame()
     // alert(game_index);
     el("message-title")[0].innerHTML=game_info_title[game_index];   
     el("message-title")[0].style.display="flex";
-    el("message-content")[0].style.display="flex";  
+    el("message-content")[0].style.display="flex";
+    //el("message-content")[0].innerHTML=inst[game_index];
     el("navign-play")[0].style.display="none";
     el("navign-back")[0].style.display="flex";
+    for(p=0;p<5;p++)
+    document.getElementById("game-ins-"+(p+1)).innerHTML=ins[game_index][p];
 }
 function backonly()
 {
@@ -243,7 +268,8 @@ function backonly()
     el("message-title")[0].innerHTML="Title";
     el("navign-play")[0].style.display="flex";
     el("navign-back")[0].style.display="none";
-
+     for(p=0;p<5;p++)
+        document.getElementById("game-ins-"+(p+1)).innerHTML="";
     var leaderboard_class= el("gameleaderboard-"+game_index)[0];
     leaderboard_class.style.height="0vh";
 }
@@ -289,14 +315,20 @@ function load_hp_images() {
     var hp_queue = new createjs.LoadQueue(false);
     hp_queue.on("complete", hp_handleComplete, this);
     hp_queue.loadManifest([
-        "https://static.pexels.com/photos/34950/pexels-photo.jpg",
-        "https://static.pexels.com/photos/248797/pexels-photo-248797.jpeg",
-        "https://i.pinimg.com/originals/5a/e5/8f/5ae58f5036997cfd4636917403c3c951.jpg",
-        "https://thecraft.shorthand.com/editing-tricks-using-picmonkey-to-add-filters-layers-to-images/media/sunflowers-mr.jpg",
-        "/static/media/cards/Arryn.svg",
-        "/static/media/cards/Greyjoy.svg",
-        "/static/media/cards/Lannister.svg",
-        "/static/media/cards/Mormont.svg"
+        "/static/media/HP/Hat.svg",
+        "/static/media/HP/hat_min.svg",
+        "/static/media/HP/house_g.svg",
+        "/static/media/HP/house_h.svg",
+        "/static/media/HP/house_r.svg",
+        "/static/media/HP/house_s.svg",
+        "/static/media/HP/parchment.svg",
+        "/static/media/HP/specs.svg",
+        "/static/media/HP/specs_anim.svg",
+        "/static/media/HP/wand3.svg",
+        "/static/media/hp-cards/Gryffindor.svg",
+        "/static/media/hp-cards/Hufflepuff.svg",
+        "/static/media/hp-cards/Ravenclaw.svg",
+        "/static/media/hp-cards/Slytherin.svg"
     ]);
     function hp_handleComplete() {
         loaded=1;
@@ -587,6 +619,7 @@ function getInitialStates() {
             assign_marvel_vars();
             assign_dc_vars();
             assign_got_vars();
+            assign_hp_vars();
         },
         error: function() {
             console.log('Error Fetching Game States');
@@ -736,7 +769,8 @@ function getSubmitResponse() {
                     check=2;
                     got_finished();
                 } else if (x==1) {
-                    // Display Finished HP
+                    hp_check=2;
+                    hp_finished();
                 } else if(x==2) {
                     ques_state=2;
                     do_marv();
@@ -755,4 +789,76 @@ function getSubmitResponse() {
             // updateQues("Hi","Hi","Hi","Hi","Hi","Hi");
         }
     });
+}
+
+var hp_check;
+
+function assign_hp_vars() {
+    hp_check=game_states[1];
+}
+
+var house_no=-1;
+        var house_src=["/static/media/HP/house_g.svg","/static/media/HP/house_h.svg","/static/media/HP/house_r.svg","/static/media/HP/house_s.svg"];
+        var house=["Gryffindor","Hufflepuff","Ravenclaw","Slytherin"];
+        function hp_sort()
+        {
+            if(document.getElementsByClassName("hp-sort-btn")[0].innerHTML=="Click To Know House")
+            {
+                hp_show_house();
+            }
+            if(document.getElementsByClassName("hp-sort-btn")[0].innerHTML=="SORT ME")
+            {
+            house_no= Math.floor(Math.random()*4);
+            //send house number to backend
+            sendSelectedChar(1,house_no);
+            document.getElementsByClassName("hp-sort-btn")[0].innerHTML="Sorting...";
+            document.getElementsByClassName("hp-hat")[0].src="/static/media/HP/hat_min.svg";
+            document.getElementsByClassName("hp-specs")[0].src="/static/media/HP/specs_anim.svg";
+            //request completed and back
+            //setTimeout(hp_sorted(),5000);
+
+            }
+        }
+
+            //request completed and back
+        function hp_sorted()
+        {
+            hp_check=1;
+            document.getElementsByClassName("hp-housecard")[0].src=house_src[house_no];
+            document.getElementsByClassName("hp-housecard")[0].style.height="0vh";
+            
+            document.getElementsByClassName("hp-sort-btn")[0].innerHTML="Click To Know House";
+        }
+        function hp_show_house()
+        {
+            document.getElementsByClassName("hp-housecard")[0].style.height="40vh";
+            document.getElementsByClassName("hp-sort-btn")[0].innerHTML=house[house_no];
+            setTimeout(function(){
+                document.getElementsByClassName("hp-sort")[0].style.display="none";
+                map();
+                el("navign-got")[0].style.display="none";
+                el("navign-play")[0].style.display="flex";
+                
+                                    },2000);
+            setTimeout(function(){show_ques_div(1);},5000);
+
+        }
+
+function hp_finished() {
+    if(el("navign-play")[0].style.display=="flex")
+        {
+            document.getElementsByClassName("next-ans")[1].innerHTML="End of Quiz";
+            setTimeout(
+                function()
+        {el(game_index+"-ques-box")[0].style.height="0vh";
+        document.getElementsByClassName(game_index+"-ques-title")[0].style.display="none";
+        document.getElementsByClassName(game_index+"-ques-content")[0].style.display="none";
+        document.getElementsByClassName(game_index+"-ques-footer")[0].style.display="none";
+        // dc_disp_dialog_charac_finished(dc_z);
+        },5000); 
+        }
+        else{
+        el("navign-play")[0].style.display="flex";
+        // dc_disp_dialog_charac_finished(dc_z);}
+}
 }

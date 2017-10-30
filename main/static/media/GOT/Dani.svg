@@ -2,7 +2,7 @@
 <!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 734 973" style="enable-background:new 0 0 734 973;" xml:space="preserve">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
 <style type="text/css">
 	.st0{fill:url(#SVGID_1_);}
 	.st1{opacity:0.7;}
@@ -520,7 +520,7 @@
     <script src="jquery.min.js"></script>
     <script src="jqfloat.js"></script>
    <script src="jquery.svg.min.js"></script>
-    <script type="text/ecmascript"><![CDATA[
+    <!-- <script type="text/ecmascript"><![CDATA[
 
         $(document).ready(function() {
    
@@ -533,5 +533,5 @@
  
     
 });
-    ]]></script>
+    ]]></script> -->
 </svg>

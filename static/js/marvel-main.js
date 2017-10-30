@@ -32,17 +32,17 @@ function load_marvel_images() {
 	marvel_queue.on("complete", marvel_handleComplete, this);
 	marvel_queue.on("progress", marvel_handleOverallProgress);
 	marvel_queue.loadManifest([
-		"./media/marvel-cards/Doom.svg",
-		"./media/marvel-cards/Kingpin.svg",
-		"./media/marvel-cards/Magneto.svg",
-		"./media/marvel-cards/Redskull.svg",
-		"./media/marvel-cards/Thanos.svg",
-		"./media/marvel-cards/Venom.svg",
-		"./media/marvel-cards/marvel-default.svg",
-		"./media/chatbox.svg",
-		"./media/chatbox-right.svg",
-		"./media/nick.svg",
-		"./media/unknown.svg"
+		"/static/media/marvel-cards/Doom.svg",
+		"/static/media/marvel-cards/Kingpin.svg",
+		"/static/media/marvel-cards/Magneto.svg",
+		"/static/media/marvel-cards/Redskull.svg",
+		"/static/media/marvel-cards/Thanos.svg",
+		"/static/media/marvel-cards/Venom.svg",
+		"/static/media/marvel-cards/marvel-default.svg",
+		"/static/media/chatbox.svg",
+		"/static/media/chatbox-right.svg",
+		"/static/media/nick.svg",
+		"/static/media/unknown.svg"
 	]);
 	function marvel_handleComplete() {
 		loaded=1; yes_loaded();

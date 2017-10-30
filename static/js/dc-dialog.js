@@ -26,8 +26,21 @@ function do_dc() {
 		// Display Ending Dialogs
 		// z is the index of selected char by user as fetched from database
 		//NAVIGATION CONTENT
-		el("navign-dccomics")[0].style.display="flex";
+        if(el("navign-play")[0].style.display=="flex")
+		{
+			document.getElementsByClassName("next-ans")[3].innerHTML="End of Quiz";
+			setTimeout(
+				function()
+	    {el(game_index+"-ques-box")[0].style.height="0vh";
+	    document.getElementsByClassName(game_index+"-ques-title")[0].style.display="none";
+	    document.getElementsByClassName(game_index+"-ques-content")[0].style.display="none";
+	    document.getElementsByClassName(game_index+"-ques-footer")[0].style.display="none";
 		dc_disp_dialog_charac_finished(dc_z);
+		},5000); 
+		}
+        else{
+		el("navign-dccomics")[0].style.display="flex";
+		dc_disp_dialog_charac_finished(dc_z);}
 	}
 }
 
