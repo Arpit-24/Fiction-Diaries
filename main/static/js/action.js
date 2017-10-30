@@ -647,6 +647,8 @@ function sendSelectedChar(x,y) {
             console.log(objReceived.vgv);
             if (x==0) {
                 check=1;
+            } else if(x==1) {
+                hp_sorted();
             }
         },
         error: function() {
