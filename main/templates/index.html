@@ -1,0 +1,1189 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset=utf-8 />
+		<title>Fiction Diaries</title>
+		{% load staticfiles %}
+		<link href="{% static 'css/style.css' %}" rel="stylesheet" type="text/css"/>
+		<meta content="width=device-width, height=device-height, initial-scale=1" name="viewport">
+		<meta content="width=device-width, user-scalable=no">
+		<link rel="stylesheet" href="{% static 'css/swiper.min.css' %}">
+		<link rel="stylesheet" type="text/css" href="{% static 'css/dc.css' %}">
+		<link rel="stylesheet" type="text/css" href="{% static 'css/marvel.css' %}">
+		<link rel="stylesheet" type="text/css" href="{% static 'css/animate.css' %}">
+		<link rel="stylesheet" type="text/css" href="{% static 'css/marvel-loading-style.css' %}">	
+		<link rel="stylesheet" type="text/css" href="{% static 'css/load.css' %}">	
+		<link rel="stylesheet" type="text/css" href="{% static 'css/choose.css' %}">	
+		<link rel="stylesheet" type="text/css" href="{% static 'css/leaderboard-style.css' %}">
+		<script type="text/javascript" src="{% static 'js/jquery.min.js' %}"></script>
+		<script src="{%  static 'js/swiper.min.js' %}"></script>
+		<script type="text/javascript" src="{% static 'js/action.js' %}"></script>
+		<script type="text/javascript" src="{% static 'js/choose.js' %}"></script>
+		<script type="text/javascript" src="{% static 'js/wow.min.js' %}"></script>
+		<script type="text/javascript" src="{% static 'js/dc-main.js' %}"></script>
+	    <script type="text/javascript" src="{% static 'js/dc-dialog.js' %}"></script>
+	    <script type="text/javascript" src="{%  static 'js/preloadjs-0.6.2.min.js' %}"></script>
+	    <script type="text/javascript" src="{% static 'js/leaderboard-script.js' %}"></script>
+		<script type="text/javascript">
+			new WOW().init();
+		</script>
+
+	</head>
+
+	<body>
+		<div class="ninetwo">
+			<!-- CARDS ABOVE MENU -->
+			<div class="swiper-container card home-swiper-container">
+	    			<div class="swiper-wrapper home-swiper-wrapper">
+	      				<div id="0" class="swiper-slide home-swiper-slide" style="background-image:url({% static 'media/GOT/Got.png' %}); "></div>
+	      				<div id="1" class="swiper-slide home-swiper-slide" style="background-image:url({% static 'media/HP/hp-card.svg' %}),url({% static 'media/HP/card.png' %});"></div>
+	        			<div id="2" class="swiper-slide home-swiper-slide" style="background-image:url({% static 'media/Marvel/Anti.svg' %});"></div>
+	        			<div id="3" class="swiper-slide home-swiper-slide" style="background-image:url({% static 'media/DC/DC_card.svg' %});background-size: cover;"></div>
+	    			</div>
+	    	</div>
+	    	<div class="game-0" id="GOT">
+	    		<div id="got-loader" class="loader-0">
+	    			<img src="{% static 'media/got_loader.gif' %}" alt="LOADING GOT" style="margin: auto;"/>
+	    		</div>
+	    		<div id="got-div" class="ingame-0">
+	    			<div id="body-got">
+				   		<center><div id="dropdown" class="got-drop-bhawan">
+				  			<button type="button" onclick="myFunction()" class="dropbtn" id="b1">Selecting Bhawan</button>
+				  		<div id="myDropdown" class="dropdown-content">
+				  			<div id="wrapper-got">
+				   		<a href="javascript:selectF(1)">Ashok Bhawan</a>
+				    	<a href="javascript:selectF(2)">Bhagirath Bhawan</a>
+				    	<a href="javascript:selectF(3)">Budh Bhawan</a>
+				    	<a href="javascript:selectF(4)">CVR Bhawan</a>
+				    	<a href="javascript:selectF(5)">Gandhi Bhawan</a>
+				    	<a href="javascript:selectF(6)">Malviya Bhawan</a>
+				    	<a href="javascript:selectF(7)">Meera Bhawan</a>
+				    	<a href="javascript:selectF(8)">Ram Bhawan</a>
+				    	<a href="javascript:selectF(9)">RP Bhawan</a>
+				    	<a href="javascript:selectF(10)">Shankar Bhawan</a>
+				    	<a href="javascript:selectF(11)">SR Bhawan</a>
+				    	<a href="javascript:selectF(12)">Vyas Bhawan</a>
+				    	<a href="javascript:selectF(13)">VK Bhawan</a>
+				    	<a href="javascript:selectF(14)">Others</a>
+				    </div>
+				  </div>
+				</div>
+				</center>
+				<center><div id="go" style="margin-top: 8vh"><button type="button" onclick="card();" class="gobtn" id="b2">Let's GO!</button></div></center>
+				        
+				        
+				        
+				<!--        ///////////////////////////////////////////////////////////////////////////////////////////////////////-->
+				        
+				        
+				        
+				        <div id="card"> <img src="{% static 'media/GOT/Cards/GOT.svg' %}" class="final" id="last" style="width:100%;height: 100%; top:0"></div>
+				        
+				        
+				        
+				        </div>
+	    		</div>
+	    	</div>
+	    	<div class="game-1" id="HP">
+	    		<div id="hp-loader" class="loader-1">
+	    			
+	    			<svg id="hovering-snitch" style="align-self: center; margin: auto; " width="27.836mm" height="26.829mm" version="1.1" viewBox="0 0 98.63022 95.063901" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+					<metadata>
+					<rdf:RDF>
+					<cc:Work rdf:about="">
+					<dc:format>image/svg+xml</dc:format>
+					<dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+					<dc:title/>
+					</cc:Work>
+					</rdf:RDF>
+					</metadata>
+					<style>
+					    #hovering-snitch{ animation: hover-snitch 3s ease-in-out infinite;}
+					  @keyframes hover-snitch{
+					  0%{transform: translatey(0px)}
+					  40%{transform: translatey(-50px) translatex(0px)}
+					  60%{transform: translatey(-50px)}
+					  100%{transform: translatey(0px)}
+					  }
+					    #zero{ fill: gold;stroke: gold;}
+					  
+					    #one{ animation: disp-one 0.3s ease-in-out infinite; }
+					  @keyframes disp-one{
+					  0%{stroke: #FFDF00; fill: #FFDF00;}
+					  14%{stroke: #FFDF00; fill: #FFDF00;}
+					  15%{stroke: none; fill: none;}
+					  89%{stroke: none; fill: none;}
+					  90%{stroke: #FFDF00; fill: #FFDF00;}
+					  100%{stroke: #FFDF00; fill: #FFDF00;}
+					  }
+
+					    #two{ animation: disp-two 0.3s ease-in-out infinite;}
+					  @keyframes disp-two{
+					  0%{stroke: none; fill: none;}
+					  14%{stroke: none; fill: none;}
+					  15%{stroke: #FFDF00; fill: #FFDF00;}
+					  29%{stroke: #FFDF00; fill: #FFDF00;}
+					  30%{stroke: none; fill: none;}
+					  74%{stroke: none; fill: none;}
+					  75%{stroke: #FFDF00; fill: #FFDF00;}
+					  89%{stroke: #FFDF00; fill: #FFDF00;}
+					  90%{stroke: none; fill: none;}
+					  100%{stroke: none; fill: none;}
+					  }   
+					    #three{ animation: disp-three 0.3s ease-in-out infinite;}
+					  @keyframes disp-three{
+					  0%{stroke: none; fill: none;}
+					  29%{stroke: none; fill: none;}
+					  30%{stroke: #FFDF00; fill: #FFDF00;}
+					  44%{stroke: #FFDF00; fill: #FFDF00;}
+					  45%{stroke: none; fill: none;}
+					  59%{stroke: none; fill: none;}
+					  60%{stroke: #FFDF00; fill: #FFDF00;}
+					  74%{stroke: #FFDF00; fill: #FFDF00;}
+					  75%{stroke: none; fill: none;}
+					  100%{stroke: none; fill: none;}
+					  } 
+					    #four{ animation: disp-four 0.3s ease-in-out infinite;}
+					  @keyframes disp-four{
+					  0%{stroke: none; fill: none;}
+					  44%{stroke: none; fill: none;}
+					  45%{stroke: #FFDF00; fill: #FFDF00;}
+					  59%{stroke: #FFDF00; fill: #FFDF00;}
+					  60%{stroke: none; fill: none;}
+					  100%{stroke: none; fill: none;}
+					  } 
+					  </style>
+					<g id="snitch" transform="translate(-377.64 -360.89)">
+					<path id="zero" d="m417.16 438.76c-3.4675 3.4674-3.9478 5.6818-1.2324 5.6818 1.1427 0 1.5557-0.72976 1.094-1.9329-0.63526-1.6555 0.58144-1.8797 8.4767-1.5625 6.1283 0.24625 9.127 0.85443 8.9455 1.8143-0.1501 0.79417 0.4893 1.7365 1.421 2.094 2.8247 1.0839 0.7843-3.9364-2.7203-6.6931-4.5479-3.5774-12.091-3.295-15.985 0.59834z"/>
+					<path id="four" d="m418.23 432.53c-0.75777-5.302-5.0259-8.1415-16.398-10.909-6.8292-1.6618-21.449-4.2484-24.065-4.2574-0.63742-2e-3 1.3314 0.89462 4.3751 1.993 8.0279 2.8969 11.538 5.0017 14.115 8.4636 1.9932 2.6772 3.1192 3.283 8.8912 4.7831 3.6349 0.94467 8.2057 2.2973 10.157 3.0058l3.5481 1.2882-0.62419-4.3674z"/>
+					<path id="zero" d="m417.16 452.85c-3.4675-3.4674-3.9478-5.6818-1.2324-5.6818 1.1427 0 1.5557 0.72976 1.094 1.9329-0.63526 1.6555 0.58144 1.8797 8.4767 1.5625 6.1283-0.24625 9.127-0.85443 8.9455-1.8143-0.1501-0.79417 0.4893-1.7365 1.421-2.094 2.8247-1.0839 0.7843 3.9364-2.7203 6.6931-4.5479 3.5774-12.091 3.295-15.985-0.59834z"/>
+					<path id="four" d="m432.24 432.05c0.82212-5.302 5.4527-8.1415 17.79-10.909 7.4092-1.6618 23.271-4.2484 26.109-4.2574 0.69155-2e-3 -1.4445 0.89462-4.7467 1.993-8.7097 2.8969-12.518 5.0017-15.314 8.4636-2.1625 2.6772-3.3841 3.283-9.6464 4.7831-3.9436 0.94467-8.9026 2.2973-11.02 3.0058l-3.8495 1.2882 0.67721-4.3674z"/>
+					<path id="three" d="m418.24 429.78c-0.73632-10.052-4.8836-15.435-15.933-20.681-6.6359-3.1506-20.842-8.054-23.384-8.0713-0.61937-4e-3 1.2938 1.696 4.2512 3.7783 7.8006 5.4919 11.212 9.4823 13.716 16.045 1.9368 5.0755 3.0309 6.224 8.6395 9.0678 3.532 1.7909 7.9734 4.3552 9.8697 5.6984l3.4477 2.4422-0.60652-8.2798z"/>
+					<path id="three" d="m432.16 429.05c0.71486-10.368 4.7413-15.921 15.469-21.332 6.4426-3.2498 20.235-8.3078 22.703-8.3256 0.60133-4e-3 -1.2561 1.7494-4.1274 3.8973-7.5733 5.6649-10.885 9.781-13.316 16.551-1.8803 5.2354-2.9426 6.42-8.3878 9.3534-3.4291 1.8473-7.7411 4.4924-9.5821 5.8779l-3.3472 2.5191 0.58885-8.5406z"/>
+					<path id="two" d="m418.35 425.35c-0.6076-15.434-4.0299-23.7-13.148-31.756-5.4759-4.8378-17.199-12.367-19.296-12.394-0.5111-6e-3 1.0676 2.6043 3.5081 5.8016 6.437 8.4329 9.2518 14.56 11.318 24.638 1.5982 7.7936 2.5011 9.557 7.1293 13.924 2.9146 2.75 6.5796 6.6875 8.1444 8.75l2.845 3.75-0.5005-12.714z"/>
+					<path id="two" d="m432.07 424.87c0.6076-15.434 4.0299-23.7 13.148-31.756 5.4759-4.8378 17.199-12.367 19.296-12.394 0.5111-6e-3 -1.0676 2.6043-3.5081 5.8016-6.437 8.4329-9.2518 14.56-11.318 24.638-1.5982 7.7936-2.5011 9.557-7.1293 13.924-2.9146 2.75-6.5796 6.6875-8.1444 8.75l-2.845 3.75 0.5005-12.714z"/>
+					<path id="one" d="m418.81 419.53c-0.37163-20.501-2.4648-31.48-8.0418-42.179-3.3492-6.4257-10.519-16.427-11.802-16.462-0.3126-8e-3 0.65298 3.4591 2.1457 7.7059 3.9371 11.201 5.6587 19.34 6.9226 32.725 0.97751 10.352 1.5298 12.694 4.3605 18.494 1.7827 3.6527 4.0243 8.8826 4.9814 11.622l1.7401 4.9809-0.30612-16.887z"/>
+					<path id="one" d="m431.87 420.7c0.37162-20.501 2.4648-31.48 8.0418-42.179 3.3492-6.4257 10.519-16.427 11.802-16.462 0.3126-8e-3 -0.65298 3.4591-2.1457 7.7059-3.9371 11.201-5.6587 19.34-6.9226 32.725-0.97751 10.352-1.5298 12.694-4.3605 18.494-1.7827 3.6527-4.0243 8.8826-4.9814 11.622l-1.7401 4.9809 0.30613-16.887z"/>
+					</g>
+					</svg>
+	    		</div>
+	    		<div id="hp-div" class="ingame-1"></div>
+	    	</div>
+	    	<div class="game-2" id="MARV">
+	    <!-- Marvel Loader -->
+	    			<div id="marvel-loader" class="loader-2">
+	    				<span id="marvel-loading-text">MARVEL</span>
+	    			</div>
+	    <!-- Trying MARVEL -->
+	    			<div id="marvel-div" class="ingame-2">
+		<!-- Character Selection Section -->
+		<div class="swiper-container marvel-swiper-container">
+			<div class="swiper-wrapper marvel-swiper-wrapper">
+				<div class="swiper-slide marvel-swiper-slide" id="magneto"></div>
+				<div class="swiper-slide marvel-swiper-slide" id="doom"></div>
+				<div class="swiper-slide marvel-swiper-slide" id="kingpin"></div>
+				<div class="swiper-slide marvel-swiper-slide" id="thanos"></div>
+				<div class="swiper-slide marvel-swiper-slide" id="redskull"></div>
+				<div class="swiper-slide marvel-swiper-slide" id="venom"></div>
+			</div>
+		</div>
+		<!-- Define Cards Behaviour -->
+		<script type="text/javascript">
+		
+			function update_marv()
+			{
+					var swiper_marv = new Swiper('.marvel-swiper-container', {
+				effect: 'coverflow',
+				grabCursor: true,
+				centeredSlides: true,
+				slidesPerView: 'auto',
+				keyboardControl: true,
+				loop: true,
+				mousewheelControl: true,
+				nextButton: document.getElementById("menu-marvel-right"),
+        		prevButton: document.getElementById("menu-marvel-left"),
+				coverflow: {
+					rotate: 50,
+					stretch: 0,
+					depth: 100,
+					modifier: 1,
+					slideShadows: true
+				}
+			});
+			// alert("0");
+			swiper_marv.update();
+			// alert("1");
+		}
+		</script>
+		<!-- Confirm Selection Div >
+		<div id="confirm-div">
+			<span id="confirm-yes" onclick="choose_char()">Choose</span>
+		</div-->
+		<!-- Continue Text -->
+		<div id="continue"></div>
+		<!-- Nick Fury Section -->
+		<div id="nick-fury" class="wow animated bounceInLeft" data-wow-duration="0.8s"></div>
+		<div id="nick-dialog" class="wow animated bounceInUp" data-wow-delay="0.8s" data-wow-duration="1.2s">
+			<div id="dialog-text"><div id="typedtext"></div></div>
+		</div>
+		<!-- Unknown Character Section -->
+		<div id="unknown" class="wow animated bounceInRight" data-wow-duration="0.8s"></div>
+		<div id="unknown-dialog" class="wow animated bounceInUp" data-wow-delay="0.8s" data-wow-duration="1.2s">
+			<div id="unkn-dialog-text"><div id="unkn-typedtext"></div></div>
+		</div>
+		<!-- Magneto Section -->
+		<div id="magneto-sec" class="wow animated bounceInRight char" data-wow-duration="0.8s"></div>
+		<div id="magneto-dialog" class="wow animated bounceInUp char-dialog" data-wow-delay="0.8s" data-wow-duration="1.2s">
+			<div id="magneto-dialog-text"><div class="char-typedtext" id="magneto-typedtext"></div></div>
+		</div>
+		<!-- doom Section -->
+		<div id="doom-sec" class="wow animated bounceInRight char" data-wow-duration="0.8s"></div>
+		<div id="doom-dialog" class="wow animated bounceInUp char-dialog" data-wow-delay="0.8s" data-wow-duration="1.2s">
+			<div id="doom-dialog-text"><div class="char-typedtext" id="doom-typedtext"></div></div>
+		</div>
+		<!-- kingpin Section -->
+		<div id="kingpin-sec" class="wow animated bounceInRight char" data-wow-duration="0.8s"></div>
+		<div id="kingpin-dialog" class="wow animated bounceInUp char-dialog" data-wow-delay="0.8s" data-wow-duration="1.2s">
+			<div id="kingpin-dialog-text"><div class="char-typedtext" id="kingpin-typedtext"></div></div>
+		</div>
+		<!-- Thanos Section -->
+		<div id="thanos-sec" class="wow animated bounceInRight char" data-wow-duration="0.8s"></div>
+		<div id="thanos-dialog" class="wow animated bounceInUp char-dialog" data-wow-delay="0.8s" data-wow-duration="1.2s">
+			<div id="thanos-dialog-text"><div class="char-typedtext" id="thanos-typedtext"></div></div>
+		</div>
+		<!-- redskull Section -->
+		<div id="redskull-sec" class="wow animated bounceInRight char" data-wow-duration="0.8s"></div>
+		<div id="redskull-dialog" class="wow animated bounceInUp char-dialog" data-wow-delay="0.8s" data-wow-duration="1.2s">
+			<div id="redskull-dialog-text"><div class="char-typedtext" id="redskull-typedtext"></div></div>
+		</div>
+		<!-- venom Section -->
+		<div id="venom-sec" class="wow animated bounceInRight char" data-wow-duration="0.8s"></div>
+		<div id="venom-dialog" class="wow animated bounceInUp char-dialog" data-wow-delay="0.8s" data-wow-duration="1.2s">
+			<div id="venom-dialog-text"><div class="char-typedtext" id="venom-typedtext"></div></div>
+		</div>
+	</div>
+		<script type="text/javascript" src="{% static 'js/marvel-main.js' %}"></script>
+	<script type="text/javascript" src="{% static 'js/marvel-dialog.js' %}"></script>
+	    		<!-- MARVEL was here -->
+	    	</div>
+	    	<div class="game-3" id="DC">
+	    		<!-- DC Loader -->
+	    			<div id="dc-loader" class="loader-3">
+	    				<div class="flip-container">
+                    		<div class="flipper" id="flip">
+                        		<div class="front" >
+                            		<img id="flipimg" src="{% static 'media/Batman-load.svg' %}">
+                        		</div>
+                        		<div class="back">
+                            		<img id="flipimg" src="{% static 'media/Joker-load.svg' %}">
+                        		</div>
+                    		</div>
+                		</div>
+	    			</div>
+	    		<!--Trying DC-->
+	    			<div id="dc-div" class="ingame-3">
+		<!-- Character Selection Section -->
+		<div class="swiper-container dc-swiper-container">
+			<div class="swiper-wrapper dc-swiper-wrapper">
+				<div class="swiper-slide dc-swiper-slide" id="superman"></div>
+				<div class="swiper-slide dc-swiper-slide" id="wonderwoman"></div>
+				<div class="swiper-slide dc-swiper-slide" id="batman"></div>
+				<div class="swiper-slide dc-swiper-slide" id="greenlantern"></div>
+				<div class="swiper-slide dc-swiper-slide" id="flash"></div>
+				<div class="swiper-slide dc-swiper-slide" id="aquaman"></div>
+			</div>
+		</div>
+		<!-- Define Cards Behaviour -->
+		<script type="text/javascript">
+			function update_dc()
+			{
+				var swiper_dc = new Swiper('.dc-swiper-container', {
+				effect: 'coverflow',
+				grabCursor: true,
+				centeredSlides: true,
+				slidesPerView: 'auto',
+				keyboardControl: true,
+				loop: true,
+				mousewheelControl: true,
+				nextButton: document.getElementById("menu-dc-right"),
+        		prevButton: document.getElementById("menu-dc-left"),
+				coverflow: {
+					rotate: 50,
+					stretch: 0,
+					depth: 100,
+					modifier: 1,
+					slideShadows: true
+				}
+			});
+				swiper_dc.update();
+			}
+		</script>
+		<!-- Confirm Selection Div>
+		<div id="dc-confirm-div">
+			<span id="dc-confirm-yes" onclick="dc_choose_char()">Choose</span>
+		</div-->
+		<!-- Continue Text -->
+		<div id="dc-continue"></div>
+		<!-- DC Char Section -->
+		<div id="dc-charac" class="wow animated bounceInLeft" data-wow-duration="0.8s"></div>
+		<div id="dc-charac-dialog" class="wow animated bounceInUp" data-wow-delay="0.8s" data-wow-duration="1.2s">
+			<div id="dc-dialog-text"><div id="dc-typedtext"></div></div>
+		</div>
+		<!-- Unknown Character Section -->
+		<div id="dc-unknown" class="wow animated bounceInRight" data-wow-duration="0.8s"></div>
+		<div id="dc-unknown-dialog" class="wow animated bounceInUp" data-wow-delay="0.8s" data-wow-duration="1.2s">
+			<div id="dc-unkn-dialog-text"><div id="dc-unkn-typedtext"></div></div>
+		</div>
+		<!-- Superman Section -->
+		<div id="superman-sec" class="wow animated bounceInRight dc-char" data-wow-duration="0.8s"></div>
+		<div id="superman-dialog" class="wow animated bounceInUp dc-char-dialog" data-wow-delay="0.8s" data-wow-duration="1.2s">
+			<div id="superman-dialog-text"><div class="dc-char-typedtext" id="superman-typedtext"></div></div>
+		</div>
+		<!-- Wonderwoman Section -->
+		<div id="wonderwoman-sec" class="wow animated bounceInRight dc-char" data-wow-duration="0.8s"></div>
+		<div id="wonderwoman-dialog" class="wow animated bounceInUp dc-char-dialog" data-wow-delay="0.8s" data-wow-duration="1.2s">
+			<div id="wonderwoman-dialog-text"><div class="dc-char-typedtext" id="wonderwoman-typedtext"></div></div>
+		</div>
+		<!-- Batman Section -->
+		<div id="batman-sec" class="wow animated bounceInRight dc-char" data-wow-duration="0.8s"></div>
+		<div id="batman-dialog" class="wow animated bounceInUp dc-char-dialog" data-wow-delay="0.8s" data-wow-duration="1.2s">
+			<div id="batman-dialog-text"><div class="dc-char-typedtext" id="batman-typedtext"></div></div>
+		</div>
+		<!-- Green Lantern Section -->
+		<div id="greenlantern-sec" class="wow animated bounceInRight dc-char" data-wow-duration="0.8s"></div>
+		<div id="greenlantern-dialog" class="wow animated bounceInUp dc-char-dialog" data-wow-delay="0.8s" data-wow-duration="1.2s">
+			<div id="greenlantern-dialog-text"><div class="dc-char-typedtext" id="greenlantern-typedtext"></div></div>
+		</div>
+		<!-- Flash Section -->
+		<div id="flash-sec" class="wow animated bounceInRight dc-char" data-wow-duration="0.8s"></div>
+		<div id="flash-dialog" class="wow animated bounceInUp dc-char-dialog" data-wow-delay="0.8s" data-wow-duration="1.2s">
+			<div id="flash-dialog-text"><div class="dc-char-typedtext" id="flash-typedtext"></div></div>
+		</div>
+		<!-- Aquaman Section -->
+		<div id="aquaman-sec" class="wow animated bounceInRight dc-char" data-wow-duration="0.8s"></div>
+		<div id="aquaman-dialog" class="wow animated bounceInUp dc-char-dialog" data-wow-delay="0.8s" data-wow-duration="1.2s">
+			<div id="aquaman-dialog-text"><div class="dc-char-typedtext" id="aquaman-typedtext"></div></div>
+		</div>
+	</div>
+	    		<!-- DC was here-->
+				<script type="text/javascript" src="{% static 'js/dc-main.js' %}"></script>
+				<script type="text/javascript" src="{%  static 'js/dc-dialog.js' %}"></script>
+	    	</div>
+	    </div>
+
+    	<!-- INITIALLY EMPTY MESSAGE -->
+    		<div class="message-home">
+    			<div class="message-title">
+    				Title
+    			</div>
+    			<div class="message-content">
+    			</div>
+    		</div>
+    	<!-- GOT QUES DIV -->
+    		<div class="0-ques-box">
+    			<div class="0-ques-title">
+    				<span>Question <span class="ques-no">1</span></span><br/>
+    				<span id="0-ques-ques"> After the end of everything there was nothing but something. What thing was that thing? </span>
+    			</div>
+    			<div class="0-ques-content">
+    				<div class="choice-0-0" onclick="select_answer(0)"><span>1.</span> <span class="option-1">OPTION ONE Lorem</span></div>
+    				<div class="choice-1-0" onclick="select_answer(1)"><span>2.</span><span class="option-2">OPTION TWO Lorem ipsum</span></div>
+    				<div class="choice-2-0" onclick="select_answer(2)"><span>3.</span><span class="option-3">OPTION THREE Lorem ipsum dllus</span></div>
+    				<div class="choice-3-0" onclick="select_answer(3)"><span>4.</span><span class="option-4">OPTION FOUR Lorem ipsum ,</span></div>
+    			</div>
+    			<div class="0-ques-footer">
+    				<span onclick="submit_ans();" class="sub-ans">Submit</span>
+    				<!-- <span onclick="leave_ques();" class="sub-ans" style="display: none;">Skip</span> -->
+   					<span onclick="next_ques();" class="next-ans">Next Question</span>
+    			</div>
+    		</div>
+    	<!-- GOT QUES WERE HERE -->
+    	<!-- HP QUESTIONS DIV AS MESSAGE -->
+    		<div class="1-ques-box">
+    			<div class="1-ques-title">
+    				<span>Question <span class="ques-no">1</span></span><br/>
+    				<span id="1-ques-ques"> After the end of everything there was nothing but something. What thing was that thing? </span>
+    			</div>
+    			<div class="1-ques-content">
+    				<div class="choice-0-1" onclick="select_answer(0)"><span>1.</span> <span class="option-1">OPTION ONE Lorem</span></div>
+    				<div class="choice-1-1" onclick="select_answer(1)"><span>2.</span><span class="option-2">OPTION TWO Lorem ipsum m</span></div>
+    				<div class="choice-2-1" onclick="select_answer(2)"><span>3.</span><span class="option-3">OPTION THREE Lorem ipsum dllus</span></div>
+    				<div class="choice-3-1" onclick="select_answer(3)"><span>4.</span><span class="option-4">OPTION FOUR Lorem ipsum ,</span></div>
+    			</div>
+    			<div class="1-ques-footer">
+    				<span onclick="submit_ans();" class="sub-ans">Submit</span>
+    				<!-- <span onclick="leave_ques();" class="sub-ans" style="display: none;">Skip</span> -->
+   					<span onclick="next_ques();" class="next-ans">Next Question</span>
+    			</div>
+    		</div>
+    	<!-- HP QUESTIONS WERE HERE -->
+    	<!-- MARVEL QUESTIONS DIV -->
+    		<div class="2-ques-box">
+    			<div class="2-ques-title">
+    				<span>Question <span class="ques-no">1</span></span><br/>
+    				<span id="2-ques-ques"> After the end of everything there was nothing but something. What thing was that thing? </span>
+    			</div>
+    			<div class="2-ques-content">
+    				<div class="choice-0-2" onclick="select_answer(0)"><span>1.</span> <span class="option-1">OPTION ONE Lorem</span></div>
+    				<div class="choice-1-2" onclick="select_answer(1)"><span>2.</span><span class="option-2">OPTION TWO Lorem ipsum m</span></div>
+    				<div class="choice-2-2" onclick="select_answer(2)"><span>3.</span><span class="option-3">OPTION THREE Lorem ipsum dllus</span></div>
+    				<div class="choice-3-2" onclick="select_answer(3)"><span>4.</span><span class="option-4">OPTION FOUR Lorem ipsum ,</span></div>
+    			</div>
+    			<div class="2-ques-footer">
+    				<span onclick="submit_ans();" class="sub-ans">Submit</span>
+    				<!-- <span onclick="leave_ques();" class="sub-ans" style="display: none;">Skip</span> -->
+   					<span onclick="next_ques();" class="next-ans">Next Question</span>
+    			</div>
+    		</div>
+    	<!-- MARVEL QUESTIONS WERE HERE -->
+    	<!-- DC QUESTIONS DIV AS MESSAGE -->
+    		<div class="3-ques-box">
+    			<div class="3-ques-title">
+    				<span>Question <span class="ques-no">1</span></span><br/>
+    				<span id="3-ques-ques"> After the end of everything there was nothing but something. What thing was that thing? </span>
+    			</div>
+    			<div class="3-ques-content">
+    				<div class="choice-0-3" onclick="select_answer(0)"><span>1.</span> <span class="option-1">OPTION ONE Lorem</span></div>
+    				<div class="choice-1-3" onclick="select_answer(1)"><span>2.</span><span class="option-2">OPTION TWO Lorem ipsum m</span></div>
+    				<div class="choice-2-3" onclick="select_answer(2)"><span>3.</span><span class="option-3">OPTION THREE Lorem ipsum dllus</span></div>
+    				<div class="choice-3-3" onclick="select_answer(3)"><span>4.</span><span class="option-4">OPTION FOUR Lorem ipsum ,</span></div>
+    			</div>
+    			<div class="3-ques-footer">
+    				<span onclick="submit_ans();" class="sub-ans">Submit</span>
+    				<!-- <span onclick="leave_ques();" class="sub-ans" style="display: none;">Skip</span> -->
+   					<span onclick="next_ques();" class="next-ans">Next Question</span>
+    			</div>
+    		</div>
+    	<!-- DC QUESTIONS WERE HERE -->
+    	<!-- GOT LEADERBOARD AS MESSAGE -->
+			<div id="got-leaderboard" class="gameleaderboard-0">
+				<div id="got-standalone-leaderboard">
+					<span class="got-standalone-leaderboard-wrapper">
+						<span class="got-standalone-house-image"></span>
+						<span class="got-standalone-name-house-wrapper">
+							<span class="got-standalone-name">Arpit Anshuman</span><br>
+							<span class="got-standalone-house">House Lannister</span><br>
+							<span class="got-standalone-rank">Rank <span class="rank">1</span></span>
+						</span>
+						<span class="got-standalone-points">1000</span>
+					</span>
+				</div>
+				<div  class="got-tab tab toggle-leaderboard">
+					<button class="got-tablinks" onclick="got_openLeaderboard(event, 'got-individual-leaderboard')">Individual Leaderboard</button>
+					<button class="got-tablinks" onclick="got_openLeaderboard(event, 'got-house-leaderboard')">House Leaderboard</button>
+				</div>
+				<div id="got-individual-leaderboard" class="got-tab-content">
+					<div id="got-individual-leaderboard-text">Individual Leaderboard</div>
+					<div id="got-individual-leaderboard-content">
+						<span class="got-individual-leaderboard-wrapper">
+							<span class="got-individual-house-image"></span>
+							<span class="got-name-house-wrapper">
+								<span class="got-individual-name">Arpit Anshuman</span><br>
+								<span class="got-individual-house">House Stark</span>
+							</span>
+							<span class="got-individual-points">1000</span>
+						</span>
+						<span class="got-individual-leaderboard-wrapper">
+							<span class="got-individual-house-image"></span>
+							<span class="got-name-house-wrapper">
+								<span class="got-individual-name">Arpit Anshuman</span><br>
+								<span class="got-individual-house">House Targaryen</span>
+							</span>
+							<span class="got-individual-points">1000</span>
+						</span>
+						<span class="got-individual-leaderboard-wrapper">
+							<span class="got-individual-house-image"></span>
+							<span class="got-name-house-wrapper">
+								<span class="got-individual-name">Arpit Anshuman</span><br>
+								<span class="got-individual-house">House Stark</span>
+							</span>
+							<span class="got-individual-points">1000</span>
+						</span>
+						<span class="got-individual-leaderboard-wrapper">
+							<span class="got-individual-house-image"></span>
+							<span class="got-name-house-wrapper">
+								<span class="got-individual-name">Arpit Anshuman</span><br>
+								<span class="got-individual-house">House Lannister</span>
+							</span>
+							<span class="got-individual-points">1000</span>
+						</span>
+						<span class="got-individual-leaderboard-wrapper">
+							<span class="got-individual-house-image"></span>
+							<span class="got-name-house-wrapper">
+								<span class="got-individual-name">Arpit Anshuman</span><br>
+								<span class="got-individual-house">House Baratheon</span>
+							</span>
+							<span class="got-individual-points">1000</span>
+						</span>
+						<span class="got-individual-leaderboard-wrapper">
+							<span class="got-individual-house-image"></span>
+							<span class="got-name-house-wrapper">
+								<span class="got-individual-name">Arpit Anshuman</span><br>
+								<span class="got-individual-house">House Stark</span>
+							</span>
+							<span class="got-individual-points">1000</span>
+						</span>
+						<span class="got-individual-leaderboard-wrapper">
+							<span class="got-individual-house-image"></span>
+							<span class="got-name-house-wrapper">
+								<span class="got-individual-name">Arpit Anshuman</span><br>
+								<span class="got-individual-house">House Arryn</span>
+							</span>
+							<span class="got-individual-points">1000</span>
+						</span>
+						<span class="got-individual-leaderboard-wrapper">
+							<span class="got-individual-house-image"></span>
+							<span class="got-name-house-wrapper">
+								<span class="got-individual-name">Arpit Anshuman</span><br>
+								<span class="got-individual-house">House Greyjoy</span>
+							</span>
+							<span class="got-individual-points">1000</span>
+						</span>
+						<span class="got-individual-leaderboard-wrapper">
+							<span class="got-individual-house-image"></span>
+							<span class="got-name-house-wrapper">
+								<span class="got-individual-name">Arpit Anshuman</span><br>
+								<span class="got-individual-house">House Lannister</span>
+							</span>
+							<span class="got-individual-points">1000</span>
+						</span>
+						<span class="got-individual-leaderboard-wrapper">
+							<span class="got-individual-house-image"></span>
+							<span class="got-name-house-wrapper">
+								<span class="got-individual-name">Arpit Anshuman</span><br>
+								<span class="got-individual-house">House Mormont</span>
+							</span>
+							<span class="got-individual-points">1000</span>
+						</span>
+					</div>
+				</div>
+				<div id="got-house-leaderboard" class="got-tab-content">
+					<div id="got-house-leaderboard-text">House Leaderboard</div>
+					<div id="got-house-leaderboard-content">
+						<span class="got-house-leaderboard-wrapper">
+							<span class="got-house-house-image"></span>
+							<span class="got-house-name-house-wrapper">
+								<span class="got-house-house">House Stark</span>
+							</span>
+							<span class="got-house-points">1000</span>
+						</span>
+						<span class="got-house-leaderboard-wrapper">
+							<span class="got-house-house-image"></span>
+							<span class="got-house-name-house-wrapper">
+								<span class="got-house-house">House Targaryen</span>
+							</span>
+							<span class="got-house-points">1000</span>
+						</span>
+						<span class="got-house-leaderboard-wrapper">
+							<span class="got-house-house-image"></span>
+							<span class="got-house-name-house-wrapper">
+								<span class="got-house-house">House Lannister</span>
+							</span>
+							<span class="got-house-points">1000</span>
+						</span>
+						<span class="got-house-leaderboard-wrapper">
+							<span class="got-house-house-image"></span>
+							<span class="got-house-name-house-wrapper">
+								<span class="got-house-house">House Mormont</span>
+							</span>
+							<span class="got-house-points">1000</span>
+						</span>
+						<span class="got-house-leaderboard-wrapper">
+							<span class="got-house-house-image"></span>
+							<span class="got-house-name-house-wrapper">
+								<span class="got-house-house">House Greyjoy</span>
+							</span>
+							<span class="got-house-points">1000</span>
+						</span>
+						<span class="got-house-leaderboard-wrapper">
+							<span class="got-house-house-image"></span>
+							<span class="got-house-name-house-wrapper">
+								<span class="got-house-house">House Baratheon</span>
+							</span>
+							<span class="got-house-points">1000</span>
+						</span>
+						<span class="got-house-leaderboard-wrapper">
+							<span class="got-house-house-image"></span>
+							<span class="got-house-name-house-wrapper">
+								<span class="got-house-house">House Arryn</span>
+							</span>
+							<span class="got-house-points">1000</span>
+						</span>
+						<span class="got-house-leaderboard-wrapper">
+							<span class="got-house-house-image"></span>
+							<span class="got-house-name-house-wrapper">
+								<span class="got-house-house">House Tyrell</span>
+							</span>
+							<span class="got-house-points">1000</span>
+						</span>
+					</div>
+				</div>
+			</div>
+    	<!-- HARRY POTTER LEADERBOARD AS MESSAGE -->
+    		<div id="hp-leaderboard" class="gameleaderboard-1">
+				<div id="hp-standalone-leaderboard">
+					<span class="hp-standalone-leaderboard-wrapper">
+						<span class="hp-standalone-house-image"></span>
+						<span class="hp-standalone-name-house-wrapper">
+							<span class="hp-standalone-name">Arpit Anshuman</span><br>
+							<span class="hp-standalone-house">House Gryffindor</span><br>
+							<span class="hp-standalone-rank">Rank <span class="rank">1</span></span>
+						</span>
+						<span class="hp-standalone-points">1000</span>
+					</span>
+				</div>
+				<div id="toggle-leaderboard" class="hp-tab tab toggle-leaderboard">
+					<button class="hp-tablinks" onclick="hp_openLeaderboard(event, 'hp-individual-leaderboard')">Individual Leaderboard</button>
+					<button class="hp-tablinks" onclick="hp_openLeaderboard(event, 'hp-house-leaderboard')">House Leaderboard</button>
+				</div>
+				<div id="hp-individual-leaderboard" class="hp-tab-content">
+					<div id="hp-individual-leaderboard-text">Individual Leaderboard</div>
+					<div id="hp-individual-leaderboard-content">
+						<span class="hp-individual-leaderboard-wrapper">
+							<span class="hp-individual-house-image"></span>
+							<span class="hp-name-house-wrapper">
+								<span class="hp-individual-name">Arpit Anshuman</span><br>
+								<span class="hp-individual-house">House Hufflepuff</span>
+							</span>
+							<span class="hp-individual-points">1000</span>
+						</span>
+						<span class="hp-individual-leaderboard-wrapper">
+							<span class="hp-individual-house-image"></span>
+							<span class="hp-name-house-wrapper">
+								<span class="hp-individual-name">Arpit Anshuman</span><br>
+								<span class="hp-individual-house">House Gryffindor</span>
+							</span>
+							<span class="hp-individual-points">1000</span>
+						</span>
+						<span class="hp-individual-leaderboard-wrapper">
+							<span class="hp-individual-house-image"></span>
+							<span class="hp-name-house-wrapper"> 
+								<span class="hp-individual-name">Arpit Anshuman</span><br>
+								<span class="hp-individual-house">House Slytherin</span>
+							</span>
+							<span class="hp-individual-points">1000</span>
+						</span>
+						<span class="hp-individual-leaderboard-wrapper">
+							<span class="hp-individual-house-image"></span>
+							<span class="hp-name-house-wrapper">
+								<span class="hp-individual-name">Arpit Anshuman</span><br>
+								<span class="hp-individual-house">House Hufflepuff</span>
+							</span>
+							<span class="hp-individual-points">1000</span>
+						</span>
+						<span class="hp-individual-leaderboard-wrapper">
+							<span class="hp-individual-house-image"></span>
+							<span class="hp-name-house-wrapper">
+								<span class="hp-individual-name">Arpit Anshuman</span><br>
+								<span class="hp-individual-house">House Gryffindor</span>
+							</span>
+							<span class="hp-individual-points">1000</span>
+						</span>
+						<span class="hp-individual-leaderboard-wrapper">
+							<span class="hp-individual-house-image"></span>
+							<span class="hp-name-house-wrapper">
+								<span class="hp-individual-name">Arpit Anshuman</span><br>
+								<span class="hp-individual-house">House Slytherin</span>
+							</span>
+							<span class="hp-individual-points">1000</span>
+						</span>
+						<span class="hp-individual-leaderboard-wrapper">
+							<span class="hp-individual-house-image"></span>
+							<span class="hp-name-house-wrapper">
+								<span class="hp-individual-name">Arpit Anshuman</span><br>
+								<span class="hp-individual-house">House Gryffindor</span>
+							</span>
+							<span class="hp-individual-points">1000</span>
+						</span>
+						<span class="hp-individual-leaderboard-wrapper">
+							<span class="hp-individual-house-image"></span>
+							<span class="hp-name-house-wrapper">
+								<span class="hp-individual-name">Arpit Anshuman</span><br>
+								<span class="hp-individual-house">House Ravenclaw</span>
+							</span>
+							<span class="hp-individual-points">1000</span>
+						</span>
+						<span class="hp-individual-leaderboard-wrapper">
+							<span class="hp-individual-house-image"></span>
+							<span class="hp-name-house-wrapper">
+								<span class="hp-individual-name">Arpit Anshuman</span><br>
+								<span class="hp-individual-house">House Hufflepuff</span>
+							</span>
+							<span class="hp-individual-points">1000</span>
+						</span>
+						<span class="hp-individual-leaderboard-wrapper">
+							<span class="hp-individual-house-image"></span>
+							<span class="hp-name-house-wrapper">
+								<span class="hp-individual-name">Arpit Anshuman</span><br>
+								<span class="hp-individual-house">House Gryffindor</span>
+							</span>
+							<span class="hp-individual-points">1000</span>
+						</span>
+					</div>
+				</div>
+				<div id="hp-house-leaderboard" class="hp-tab-content">
+					<div id="hp-house-leaderboard-text">House Leaderboard</div>
+					<div id="hp-house-leaderboard-content">
+						<span class="hp-house-leaderboard-wrapper">
+							<span class="hp-house-house-image"></span>
+							<span class="hp-house-name-house-wrapper">
+								<span class="hp-house-house">House Gryffindor</span>
+							</span>
+							<span class="hp-house-points">1000</span>
+						</span>
+						<span class="hp-house-leaderboard-wrapper">
+							<span class="hp-house-house-image"></span>
+							<span class="hp-house-name-house-wrapper">
+								<span class="hp-house-house">House Hufflepuff</span>
+							</span>
+							<span class="hp-house-points">1000</span>
+						</span>
+						<span class="hp-house-leaderboard-wrapper">
+							<span class="hp-house-house-image"></span>
+							<span class="hp-house-name-house-wrapper">
+								<span class="hp-house-house">House Ravenclaw</span>
+							</span>
+							<span class="hp-house-points">1000</span>
+						</span>
+						<span class="hp-house-leaderboard-wrapper">
+							<span class="hp-house-house-image"></span>
+							<span class="hp-house-name-house-wrapper">
+								<span class="hp-house-house">House Slytherin</span>
+							</span>
+							<span class="hp-house-points">1000</span>
+						</span>
+					</div>
+				</div>
+			</div>
+    	<!-- MARVEL LEADERBOARD AS MESSAGE -->
+    		<div id="marvel-leaderboard" class="gameleaderboard-2">
+			<div id="marvel-standalone-leaderboard">
+				<span class="marvel-standalone-leaderboard-wrapper">
+					<span class="marvel-standalone-house-image"></span>
+					<span class="marvel-standalone-name-house-wrapper">
+						<span class="marvel-standalone-name">Arpit Anshuman</span><br>
+						<span class="marvel-standalone-house">Character Venom</span><br>
+						<span class="marvel-standalone-rank">Rank <span class="rank">1</span></span>
+					</span>
+					<span class="marvel-standalone-points">1000</span>
+				</span>
+			</div>
+			<div id="toggle-leaderboard" class="marvel-tab tab toggle-leaderboard">
+				<button class="marvel-tablinks" onclick="marvel_openLeaderboard(event, 'marvel-individual-leaderboard')">Individual Leaderboard</button>
+				<button class="marvel-tablinks" onclick="marvel_openLeaderboard(event, 'marvel-house-leaderboard')">Character Leaderboard</button>
+			</div>
+			<div id="marvel-individual-leaderboard" class="marvel-tab-content">
+				<div id="marvel-individual-leaderboard-text">Individual Leaderboard</div>
+				<div id="marvel-individual-leaderboard-content">
+					<span class="marvel-individual-leaderboard-wrapper">
+						<span class="marvel-individual-house-image"></span>
+						<span class="marvel-name-house-wrapper">
+							<span class="marvel-individual-name">Arpit Anshuman</span><br>
+							<span class="marvel-individual-house">Character Venom</span>
+						</span>
+						<span class="marvel-individual-points">1000</span>
+					</span>
+					<span class="marvel-individual-leaderboard-wrapper">
+						<span class="marvel-individual-house-image"></span>
+						<span class="marvel-name-house-wrapper">
+							<span class="marvel-individual-name">Arpit Anshuman</span><br>
+							<span class="marvel-individual-house">Character Kingpin</span>
+						</span>
+						<span class="marvel-individual-points">1000</span>
+					</span>
+					<span class="marvel-individual-leaderboard-wrapper">
+						<span class="marvel-individual-house-image"></span>
+						<span class="marvel-name-house-wrapper">
+							<span class="marvel-individual-name">Arpit Anshuman</span><br>
+							<span class="marvel-individual-house">Character Doom</span>
+						</span>
+						<span class="marvel-individual-points">1000</span>
+					</span>
+					<span class="marvel-individual-leaderboard-wrapper">
+						<span class="marvel-individual-house-image"></span>
+						<span class="marvel-name-house-wrapper">
+							<span class="marvel-individual-name">Arpit Anshuman</span><br>
+							<span class="marvel-individual-house">Character Kingpin</span>
+						</span>
+						<span class="marvel-individual-points">1000</span>
+					</span>
+					<span class="marvel-individual-leaderboard-wrapper">
+						<span class="marvel-individual-house-image"></span>
+						<span class="marvel-name-house-wrapper">
+							<span class="marvel-individual-name">Arpit Anshuman</span><br>
+							<span class="marvel-individual-house">Character Magneto</span>
+						</span>
+						<span class="marvel-individual-points">1000</span>
+					</span>
+					<span class="marvel-individual-leaderboard-wrapper">
+						<span class="marvel-individual-house-image"></span>
+						<span class="marvel-name-house-wrapper">
+							<span class="marvel-individual-name">Arpit Anshuman</span><br>
+							<span class="marvel-individual-house">Character Redskull</span>
+						</span>
+						<span class="marvel-individual-points">1000</span>
+					</span>
+					<span class="marvel-individual-leaderboard-wrapper">
+						<span class="marvel-individual-house-image"></span>
+						<span class="marvel-name-house-wrapper">
+							<span class="marvel-individual-name">Arpit Anshuman</span><br>
+							<span class="marvel-individual-house">Character Thanos</span>
+						</span>
+						<span class="marvel-individual-points">1000</span>
+					</span>
+					<span class="marvel-individual-leaderboard-wrapper">
+						<span class="marvel-individual-house-image"></span>
+						<span class="marvel-name-house-wrapper">
+							<span class="marvel-individual-name">Arpit Anshuman</span><br>
+							<span class="marvel-individual-house">Character Thanos</span>
+						</span>
+						<span class="marvel-individual-points">1000</span>
+					</span>
+					<span class="marvel-individual-leaderboard-wrapper">
+						<span class="marvel-individual-house-image"></span>
+						<span class="marvel-name-house-wrapper">
+							<span class="marvel-individual-name">Arpit Anshuman</span><br>
+							<span class="marvel-individual-house">Character Thanos</span>
+						</span>
+						<span class="marvel-individual-points">1000</span>
+					</span>
+					<span class="marvel-individual-leaderboard-wrapper">
+						<span class="marvel-individual-house-image"></span>
+						<span class="marvel-name-house-wrapper">
+							<span class="marvel-individual-name">Arpit Anshuman</span><br>
+							<span class="marvel-individual-house">Character Redskull</span>
+						</span>
+						<span class="marvel-individual-points">1000</span>
+					</span>
+				</div>
+		</div>
+		<div id="marvel-house-leaderboard" class="marvel-tab-content">
+			<div id="marvel-house-leaderboard-text">Character Leaderboard</div>
+			<div id="marvel-house-leaderboard-content">
+				<span class="marvel-house-leaderboard-wrapper">
+					<span class="marvel-house-house-image"></span>
+					<span class="marvel-house-name-house-wrapper">
+						<span class="marvel-house-house">Character Thanos</span>
+					</span>
+					<span class="marvel-house-points">1000</span>
+				</span>
+				<span class="marvel-house-leaderboard-wrapper">
+					<span class="marvel-house-house-image"></span>
+					<span class="marvel-house-name-house-wrapper">
+						<span class="marvel-house-house">Character Venom</span>
+					</span>
+					<span class="marvel-house-points">1000</span>
+				</span>
+				<span class="marvel-house-leaderboard-wrapper">
+					<span class="marvel-house-house-image"></span>
+					<span class="marvel-house-name-house-wrapper">
+						<span class="marvel-house-house">Character Redskull</span>
+					</span>
+					<span class="marvel-house-points">1000</span>
+				</span>
+				<span class="marvel-house-leaderboard-wrapper">
+					<span class="marvel-house-house-image"></span>
+					<span class="marvel-house-name-house-wrapper">
+						<span class="marvel-house-house">Character Doom</span>
+					</span>
+					<span class="marvel-house-points">1000</span>
+				</span>
+				<span class="marvel-house-leaderboard-wrapper">
+					<span class="marvel-house-house-image"></span>
+					<span class="marvel-house-name-house-wrapper">
+						<span class="marvel-house-house">Character Kingpin</span>
+					</span>
+					<span class="marvel-house-points">1000</span>
+				</span>
+				<span class="marvel-house-leaderboard-wrapper">
+					<span class="marvel-house-house-image"></span>
+					<span class="marvel-house-name-house-wrapper">
+						<span class="marvel-house-house">Character Magneto</span>
+					</span>
+					<span class="marvel-house-points">1000</span>
+				</span>
+			</div>
+		</div>
+	</div> 	
+    	<!--DC LEADERBOARD AS MESSAGE -->
+    		<div id="dc-leaderboard" class="gameleaderboard-3">
+				<div id="dc-standalone-leaderboard">
+					<span class="dc-standalone-leaderboard-wrapper">
+						<span class="dc-standalone-house-image"></span>
+						<span class="dc-standalone-name-house-wrapper">
+							<span class="dc-standalone-name">Arpit Anshuman</span><br>
+							<span class="dc-standalone-house">Character Batman</span><br>
+							<span class="dc-standalone-rank">Rank <span class="rank">1</span></span>
+						</span>
+						<span class="dc-standalone-points">1000</span>
+					</span>
+				</div>
+				<div id="toggle-leaderboard" class="dc-tab tab toggle-leaderboard">
+					<button class="dc-tablinks" onclick="dc_openLeaderboard(event, 'dc-individual-leaderboard')">Individual Leaderboard</button>
+					<button class="dc-tablinks" onclick="dc_openLeaderboard(event, 'dc-house-leaderboard')">Character Leaderboard</button>
+				</div>
+				<div id="dc-individual-leaderboard" class="dc-tab-content">
+					<div id="dc-individual-leaderboard-text">Individual Leaderboard</div>
+					<div id="dc-individual-leaderboard-content">
+						<span class="dc-individual-leaderboard-wrapper">
+							<span class="dc-individual-house-image"></span>
+							<span class="dc-name-house-wrapper">
+								<span class="dc-individual-name">Arpit Anshuman</span><br>
+								<span class="dc-individual-house">Character Superman</span>
+							</span>
+							<span class="dc-individual-points">1000</span>
+						</span>
+						<span class="dc-individual-leaderboard-wrapper">
+							<span class="dc-individual-house-image"></span>
+							<span class="dc-name-house-wrapper">
+								<span class="dc-individual-name">Arpit Anshuman</span><br>
+								<span class="dc-individual-house">Character Wonder-Woman</span>
+							</span>
+							<span class="dc-individual-points">1000</span>
+						</span>
+						<span class="dc-individual-leaderboard-wrapper">
+							<span class="dc-individual-house-image"></span>
+							<span class="dc-name-house-wrapper">
+								<span class="dc-individual-name">Arpit Anshuman</span><br>
+								<span class="dc-individual-house">Character Green-Lantern</span>
+							</span>
+							<span class="dc-individual-points">1000</span>
+						</span>
+						<span class="dc-individual-leaderboard-wrapper">
+							<span class="dc-individual-house-image"></span>
+							<span class="dc-name-house-wrapper">
+								<span class="dc-individual-name">Arpit Anshuman</span><br>
+								<span class="dc-individual-house">Character Batman</span>
+							</span>
+							<span class="dc-individual-points">1000</span>
+						</span>
+						<span class="dc-individual-leaderboard-wrapper">
+							<span class="dc-individual-house-image"></span>
+							<span class="dc-name-house-wrapper">
+								<span class="dc-individual-name">Arpit Anshuman</span><br>
+								<span class="dc-individual-house">Character Aquaman</span>
+							</span>
+							<span class="dc-individual-points">1000</span>
+						</span>
+						<span class="dc-individual-leaderboard-wrapper">
+							<span class="dc-individual-house-image"></span>
+							<span class="dc-name-house-wrapper">
+								<span class="dc-individual-name">Arpit Anshuman</span><br>
+								<span class="dc-individual-house">Character Flash</span>
+							</span>
+							<span class="dc-individual-points">1000</span>
+						</span>
+						<span class="dc-individual-leaderboard-wrapper">
+							<span class="dc-individual-house-image"></span>
+							<span class="dc-name-house-wrapper">
+								<span class="dc-individual-name">Arpit Anshuman</span><br>
+								<span class="dc-individual-house">Character Flash</span>
+							</span>
+							<span class="dc-individual-points">1000</span>
+						</span>
+						<span class="dc-individual-leaderboard-wrapper">
+							<span class="dc-individual-house-image"></span>
+							<span class="dc-name-house-wrapper">
+								<span class="dc-individual-name">Arpit Anshuman</span><br>
+								<span class="dc-individual-house">Character Batman</span>
+							</span>
+							<span class="dc-individual-points">1000</span>
+						</span>
+						<span class="dc-individual-leaderboard-wrapper">
+							<span class="dc-individual-house-image"></span>
+							<span class="dc-name-house-wrapper">
+								<span class="dc-individual-name">Arpit Anshuman</span><br>
+								<span class="dc-individual-house">Character Superman</span>
+							</span>
+							<span class="dc-individual-points">1000</span>
+						</span>
+						<span class="dc-individual-leaderboard-wrapper">
+							<span class="dc-individual-house-image"></span>
+							<span class="dc-name-house-wrapper">
+								<span class="dc-individual-name">Arpit Anshuman</span><br>
+								<span class="dc-individual-house">Character Flash</span>
+							</span>
+							<span class="dc-individual-points">1000</span>
+						</span>
+					</div>
+				</div>
+				<div id="dc-house-leaderboard" class="dc-tab-content">
+					<div id="dc-house-leaderboard-text">Character Leaderboard</div>
+					<div id="dc-house-leaderboard-content">
+						<span class="dc-house-leaderboard-wrapper">
+							<span class="dc-house-house-image"></span>
+							<span class="dc-house-name-house-wrapper">
+								<span class="dc-house-house">Character Batman</span>
+							</span>
+							<span class="dc-house-points">1000</span>
+						</span>
+						<span class="dc-house-leaderboard-wrapper">
+							<span class="dc-house-house-image"></span>
+							<span class="dc-house-name-house-wrapper">
+								<span class="dc-house-house">Character Flash</span>
+							</span>
+							<span class="dc-house-points">1000</span>
+						</span>
+						<span class="dc-house-leaderboard-wrapper">
+							<span class="dc-house-house-image"></span>
+							<span class="dc-house-name-house-wrapper">
+								<span class="dc-house-house">Character Superman</span>
+							</span>
+							<span class="dc-house-points">1000</span>
+						</span>
+						<span class="dc-house-leaderboard-wrapper">
+							<span class="dc-house-house-image"></span>
+							<span class="dc-house-name-house-wrapper">
+								<span class="dc-house-house">Character Wonder-Woman</span>
+							</span>
+							<span class="dc-house-points">1000</span>
+						</span>
+						<span class="dc-house-leaderboard-wrapper">
+							<span class="dc-house-house-image"></span>
+							<span class="dc-house-name-house-wrapper">
+								<span class="dc-house-house">Character Green-Lantern</span>
+							</span>
+							<span class="dc-house-points">1000</span>
+						</span>
+						<span class="dc-house-leaderboard-wrapper">
+							<span class="dc-house-house-image"></span>
+							<span class="dc-house-name-house-wrapper">
+								<span class="dc-house-house">Character Aquaman</span>
+							</span>
+							<span class="dc-house-points">1000</span>
+						</span>
+					</div>
+				</div>
+			</div>
+    	<!--ALL LEADERBOARDS GONE -->
+		<!-- MENU -->
+			<!-- HOME MENU -->
+		<footer class="navign-message">
+		</footer>
+		<footer class="navign-home">
+			<span id="menu-home-left">
+				<img id="icon-home-left" src="{%  static 'media/chevron-left.svg' %}"/>
+			</span>
+			<span id="menu-home-play" onclick="hometoconf(this);">
+				<img id="icon-home-play" src="{% static 'media/play.svg' %}"/>
+			</span>
+			<span id="menu-home-right">
+				<img id="icon-home-right" src="{% static 'media/chevron-right.svg' %}"/>
+			</span>
+		</footer>
+			<!-- CONFIRM MENU -->
+		<footer class="navign-confirm">
+			<span id="menu-confirm-back" onclick="conftohome();">
+				<img id="icon-confirm-back" src="{% static 'media/chevron-sub-left.svg' %}"/>
+			</span>
+			<span id="menu-confirm-done" onclick="conftoload();">
+				<svg id="icon-confirm-done" width="18" height="18" fill="#FFFFFF" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+				<path d="M0 0h24v24H0z" fill="none"/>
+				<path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/>
+			</svg>
+			</span>
+		</footer>
+			<!-- PLAY MENU-->
+		<footer class="navign-play">
+			<span id="menu-play-instructions" onclick="insofgame();">
+				<svg id="icon-play-instructions" width="18" height="18" fill="#FFFFFF" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+				<path d="M0 0h24v24H0z" fill="none"/>
+				<path d="M19 3h-4.18C14.4 1.84 13.3 1 12 1c-1.3 0-2.4.84-2.82 2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 0c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zm2 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/>
+				</svg>
+				<section>Instructions</section>
+			</span>
+			<span id="menu-play-leaderboard" onclick="leadofgame();">
+				<svg id="icon-play-leaderboard"width="18" height="18" fill="#FFFFFF" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+				<path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"/>
+				<path d="M0 0h24v24H0z" fill="none"/>
+				</svg>
+				<section>Leaderboard</section>
+			</span>
+			<span id="menu-play-user">
+				<svg id="icon-play-user" width="18" height="18" fill="#FFFFFF" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+				<path d="M3 5v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2H5c-1.11 0-2 .9-2 2zm12 4c0 1.66-1.34 3-3 3s-3-1.34-3-3 1.34-3 3-3 3 1.34 3 3zm-9 8c0-2 4-3.1 6-3.1s6 1.1 6 3.1v1H6v-1z"/>
+				<path d="M0 0h24v24H0z" fill="none"/>
+				</svg>
+				<section id="user-name-sec">Username</section>
+			</span>
+			<span id="menu-play-back" onclick="gametohome();">
+				<img id="icon-play-back" src="{% static 'media/chevron-sub-left.svg' %}"/>
+				<section>Back</section>
+			</span>
+		</footer>
+			<!-- BACK ONLY MENU -->
+		<footer class="navign-back">
+			<span id="menu-back-back" onclick="backonly();">
+				<img id="icon-back-back" src="{% static 'media/chevron-sub-left.svg' %}"/>
+				<section>Back</section>
+			</span>
+		</footer>
+		<!-- GOT BELONG MENU -->
+		<footer class="navign-got">
+			<span id="menu-got-belong">LET'S SEE WHERE YOU BELONG</span>
+		</footer>
+			<!-- DC COMICS MENU -->
+		<footer class="navign-dccomics">
+			<span id="menu-dccomics-dcdc">DC COMICS</span>
+		</footer>
+			<!-- MARVEL COMICS MENU -->
+		<footer class="navign-marvcomics">
+			<span id="menu-marvcomics-dcdc">MARVEL COMICS</span>
+		</footer>
+			<!-- MARVEL CHOOSE -->
+		<footer class="navign-marvel">
+			<span id="menu-marvel-left">
+				<img id="icon-marvel-left" src="{% static 'media/chevron-left.svg' %}"/>
+			</span>
+			<span id="menu-marvel-play" onclick="choose_char()">
+				<img id="icon-marvel-play" src="{% static 'media/done.svg' %}"/>
+			</span>
+			<span id="menu-marvel-right">
+				<img id="icon-marvel-right" src="{% static 'media/chevron-right.svg' %}"/>
+			</span>
+		</footer>
+			<!-- DC CHOOSE -->
+		<footer class="navign-dc">
+			<span id="menu-dc-left">
+				<img id="icon-dc-left" src="{% static 'media/chevron-left.svg' %}"/>
+			</span>
+			<span id="menu-dc-play" onclick="dc_choose_char()">
+				<img id="icon-dc-play" src="{% static 'media/done.svg' %}"/>
+			</span>
+			<span id="menu-dc-right">
+				<img id="icon-dc-right" src="{% static 'media/chevron-right.svg' %}"/>
+			</span>
+		</footer>
+			<!-- LOADING MENU -->
+		<footer class="navign-loading">
+			<span id="menu-loading-load" >
+				Loading...
+			</span>
+			<span id="menu-loading-back" onclick="loadtohome();">
+				<img id="icon-loading-back" src="{% static 'media/chevron-sub-left.svg' %}"/>
+			</span>
+		</footer>
+
+  <script>
+  	update_home();
+  	function update_home()
+  	{
+    var swiper_home = new Swiper('.card', {
+      effect: 'cube',
+      grabCursor: true,
+      cubeEffect: {
+        shadow: true,
+        slideShadows: true,
+        shadowOffset: 20,
+        shadowScale: 0.94,
+      },loop: true,
+      	keyboardControl: true,
+      	nextButton: document.getElementById("menu-home-right"),
+        prevButton: document.getElementById("menu-home-left"),
+        mousewheelControl: true,
+    });
+    swiper_home.update();
+	}
+  </script>
+	</body>
+</html>

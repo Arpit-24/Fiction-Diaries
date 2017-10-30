@@ -1,0 +1,250 @@
+#dc-div {
+	width: 100vw;
+	max-width: 100vw;
+	max-height: 92vh;
+	height: 92vh;
+	background: black;
+}
+
+/*------------DC Char's Dialogs-----------*/
+
+#dc-charac {
+	width: 15vw;
+	height: 30vh;
+	position: fixed;
+	bottom: 8vh;
+	left: 0;
+	background-image: url(../media/step-face.svg);
+	background-size: 100% 100%;
+	display: none;
+}
+#dc-charac-dialog {
+	width: 100vw;
+	height: 35vh;
+	color: #FFF;
+	position: fixed;
+	top: 32vh;
+	left: 0;
+	background-image: url(../media/chatbox.svg);
+	background-size: 100% 100%;
+	display: none;
+}
+#dc-dialog-text {
+	display: inline-block;
+	padding: 8vh 6vw;
+}
+
+/*---------------Animate Typer-----------*/
+
+.cursor {
+	animation: blink 500ms linear infinite alternate;
+}
+
+#dc-c-cursor {
+	animation: blink 50ms linear infinite alternate;
+}
+
+@-webkit-keyframes blink{
+	0%{opacity: 0;}
+	100%{opacity: 1;}
+}
+
+@-moz-keyframes blink{
+	0%{opacity: 0;}
+	100%{opacity: 1;}
+}
+
+@keyframes blink{
+	0%{opacity: 0;}
+	100%{opacity: 1;}
+}
+
+/*--------------------Media Queries---------------*/
+
+@media screen and (min-width: 768px){
+	#dc-charac-dialog {
+		width: 70vw;
+		left: 5vw;
+	}
+	#dc-charac {
+		left: 5vw;
+	}
+	#dc-unknown-dialog, #superman-dialog, #wonderwoman-dialog, #batman-dialog, #greenlantern-dialog, #flash-dialog, #aquaman-dialog {
+		width: 70vw !important;
+		right: 5vw !important;
+	}
+	#dc-unknown, #superman-sec, #wonderwoman-sec, #batman-sec, #greenlantern-sec, #flash-sec, #aquaman-sec {
+		right: 5vw !important;
+	}
+	.dc-swiper-container {
+		height: 70vh !important;
+	}
+	.dc-swiper-slide {
+		width: 30vw !important;
+	}
+}
+
+@media screen and (max-width: 768px){
+	.dc-swiper-container {
+		height: 60vh !important;
+	}
+	.dc-swiper-slide {
+		width: 60vw !important;
+	}
+	#dc-charac, #dc-unknown, #superman-sec, #wonderwoman-sec, #batman-sec, #greenlantern-sec, #flash-sec, #aquaman-sec {
+		width: 30vw;
+	}
+}
+
+/*--------------------Continue Text-----------------*/
+
+#dc-continue {
+	color: white;
+	position: fixed;
+	top: 22vh;
+	width: 100vw;
+	text-align: center;
+}
+
+/*----------------------Character Dialog--------------------*/
+
+#dc-unknown {
+	width: 15vw;
+	height: 30vh;
+	position: fixed;
+	bottom: 8vh;
+	right: 0;
+	background-image: url(../media/unknown.svg);
+	background-size: 100% 100%;
+	display: none;
+}
+#superman-sec {
+	width: 15vw;
+	height: 30vh;
+	position: fixed;
+	bottom: 8vh;
+	right: 0;
+	background-image: url(../media/cards/Superman.svg);
+	background-size: 100% 100%;
+	display: none;
+}
+#wonderwoman-sec {
+	width: 15vw;
+	height: 30vh;
+	position: fixed;
+	bottom: 8vh;
+	right: 0;
+	background-image: url(../media/cards/WonderWoman.svg);
+	background-size: 100% 100%;
+	display: none;
+}
+#batman-sec {
+	width: 15vw;
+	height: 30vh;
+	position: fixed;
+	bottom: 8vh;
+	right: 0;
+	background-image: url(../media/cards/Batman.svg);
+	background-size: 100% 100%;
+	display: none;
+}
+#greenlantern-sec {
+	width: 15vw;
+	height: 30vh;
+	position: fixed;
+	bottom: 8vh;
+	right: 0;
+	background-image: url(../media/cards/Lantern.svg);
+	background-size: 100% 100%;
+	display: none;
+}
+#flash-sec {
+	width: 15vw;
+	height: 30vh;
+	position: fixed;
+	bottom: 8vh;
+	right: 0;
+	background-image: url(../media/cards/Flash.svg);
+	background-size: 100% 100%;
+	display: none;
+}
+#aquaman-sec {
+	width: 15vw;
+	height: 30vh;
+	position: fixed;
+	bottom: 8vh;
+	right: 0;
+	background-image: url(../media/cards/Aquaman.svg);
+	background-size: 100% 100%;
+	display: none;
+}
+#dc-unknown-dialog, #superman-dialog, #wonderwoman-dialog, #batman-dialog, #greenlantern-dialog, #flash-dialog, #aquaman-dialog {
+	width: 100vw;
+	height: 35vh;
+	color: #FFF;
+	position: fixed;
+	top: 32vh;
+	right: 0;
+	background-image: url(../media/chatbox-right.svg);
+	background-size: 100% 100%;
+	display: none;
+}
+#dc-unkn-dialog-text, #superman-dialog-text, #wonderwoman-dialog-text, #batman-dialog-text, #greenlantern-dialog-text, #flash-dialog-text, #aquaman-dialog-text {
+	display: inline-block;
+	padding: 8vh 6vw;
+}
+
+/*---------------------Character Selection-------------------*/
+
+.dc-swiper-container {
+	width: 100vw;
+	height: 70vh;
+	position: fixed;
+	top: 10vh;
+	z-index: -1 !important;
+	max-width: 100vw;
+}
+.dc-swiper-slide {
+	background-position: center;
+	width: 30vw;
+}
+#superman {
+	background-image: url(../media/cards/Superman.svg);
+	background-size: 100% 100%;
+}
+#wonderwoman {
+	background-image: url(../media/cards/WonderWoman.svg);
+	background-size: 100% 100%;
+}
+#batman {
+	background-image: url(../media/cards/Batman.svg);
+	background-size: 100% 100%;
+}
+#greenlantern {
+	background-image: url(../media/cards/Lantern.svg);
+	background-size: 100% 100%;
+}
+#flash {
+	background-image: url(../media/cards/Flash.svg);
+	background-size: 100% 100%;
+}
+#aquaman {
+	background-image: url(../media/cards/Aquaman.svg);
+	background-size: 100% 100%;
+}
+
+/*-------------------------Confirm Selection---------------------*/
+
+#dc-confirm-div {
+	width: 30vw;
+	text-align: center;
+	position: fixed;
+	bottom: 8vh;
+	left: 35vw;
+	display: none;
+	cursor: pointer;
+}
+#dc-confirm-yes {
+	background-color: lightgreen;
+	padding: 10px 20px;
+}

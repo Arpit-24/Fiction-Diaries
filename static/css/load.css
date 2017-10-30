@@ -1,0 +1,75 @@
+.flip-container{
+    width: 100vw; height: 92vh;
+    top:0;
+    left:0;
+    position: absolute;
+}
+#flipimg{
+    width: 20vw;
+    height:60vh;
+}
+.flipper{
+   width: 100vw;height: 92vh;
+}
+.flip-container {
+	perspective: 1000px;
+    transform-origin:center;
+}
+.front {
+	z-index: 2;
+	/* for firefox 31 */
+	transform: rotateY(0deg);
+}
+
+/* back, initially hidden pane */
+.back {
+	transform: rotateY(180deg);
+}
+.front, .back {
+	backface-visibility: hidden;
+	position: absolute;
+	left: 40vw;
+    top:   16vh;
+   
+}
+
+.flipped{
+    position: absolute;
+    transform-origin:50% 50%;
+    animation-name: spin;
+    animation-timing-function: ease-in-out;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    transform-style: preserve-3d;
+}
+@keyframes spin{
+    0% { 
+        -moz-transform: rotateX(0deg); 
+        -ms-transform: rotateX(0deg); 
+        transform: rotateX(0deg); 
+    } 
+    50% 
+    { 
+        -moz-transform: rotateX(180deg); 
+        -ms-transform: rotateX(180deg); 
+        transform: rotateX(180deg); 
+    
+    } 
+    100% 
+    { 
+        -moz-transform: rotateX(3600deg); 
+        -ms-transform: rotateX(360deg); 
+        transform: rotateX(360deg); 
+    
+    } 
+}
+@media screen and (max-width:768px){
+    #flipimg{ 
+        width: 70vw;
+        height: 80vh;
+    }
+    .front, .back {
+        top: 6vh;
+        left:15vw;
+    }
+}

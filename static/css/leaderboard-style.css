@@ -1,0 +1,286 @@
+#dc-leaderboard,#marvel-leaderboard,#got-leaderboard,#hp-leaderboard  {
+	
+	max-height: 92vh;	
+	overflow: auto;
+	transition: height 0.8s; z-index: 200; opacity: 0.8; background: #000000; position: absolute; bottom: 8vh; width: 100vw; max-width: 100vw; height: 0;
+}
+#dc-leaderboard::-webkit-scrollbar-track,#marvel-leaderboard::-webkit-scrollbar-track,#got-leaderboard::-webkit-scrollbar-track,#hp-leaderboard::-webkit-scrollbar-track{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	border-radius: 10px;
+	background-color: #F5F5F5;
+}
+#dc-leaderboard::-webkit-scrollbar,#marvel-leaderboard::-webkit-scrollbar,#got-leaderboard::-webkit-scrollbar,#hp-leaderboard::-webkit-scrollbar {
+	width: 1px;
+	background-color: #F5F5F5;
+}
+#dc-leaderboard::-webkit-scrollbar-thumb,#marvel-leaderboard::-webkit-scrollbar-thumb,#got-leaderboard::-webkit-scrollbar-thumb,#hp-leaderboard::-webkit-scrollbar-thumb {
+	border-radius: 10px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	background-color: #555;
+}
+.dc-standalone-leaderboard-wrapper,.marvel-standalone-leaderboard-wrapper,.got-standalone-leaderboard-wrapper,.hp-standalone-leaderboard-wrapper  {
+	display: table;
+	width: 40vw;
+	padding: 2vw;
+	background-color: #7AD18A;
+	position: relative;
+	top: 2vh;
+	left: 50%;
+	transform: translateX(-50%);
+}
+.dc-standalone-house-image,.marvel-standalone-house-image,.got-standalone-house-image,.hp-standalone-house-image  {
+	display: inline-block;
+	width: 6vw;
+	height: 6vw;
+	border-radius: 3vw;
+	background-color: black;
+	
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+.dc-standalone-house-image{background-image: url(../media/dc-cards/dc-default.svg);}
+.marvel-standalone-house-image{background-image: url(../media/marvel-cards/marvel-default.svg);}
+.got-standalone-house-image{background-image: url(../media/got-cards/default.svg);}
+.hp-standalone-house-image{background-image: url(../media/hp-cards/hp-default.svg);}
+.dc-standalone-name-house-wrapper,.marvel-standalone-name-house-wrapper,.got-standalone-name-house-wrapper,.hp-standalone-name-house-wrapper  {
+	display: table-cell;
+	width: calc(100% - 16vw);
+	padding: 1vw;
+	vertical-align: middle;
+	text-align: center;
+}
+.dc-standalone-name,.marvel-standalone-name,.got-standalone-name,.hp-standalone-name  {
+	font-size: 2.6vh;
+	color: #000000;
+}
+.dc-standalone-house,.marvel-standalone-house,.got-standalone-house,.hp-standalone-house  {
+	font-size: 2.3vh;
+	color: rgba(0,0,0,0.8);
+}
+.dc-standalone-rank,.marvel-standalone-rank,.got-standalone-rank,.hp-standalone-rank  {
+	font-size: 2.3vh;
+	color: rgba(0,0,0,0.8);
+}
+.dc-standalone-points,.marvel-standalone-points,.got-standalone-points,.hp-standalone-points  {
+	display: table-cell;
+	width: 8vw;
+	vertical-align: middle;
+	text-align: center;
+}
+.toggle-leaderboard {
+	position: relative;
+	top: 4vh;
+	display: inline-block;
+	text-align: center;
+	display: none; /*Display when Viewed from Mobile*/
+}
+/* Style the tab */
+div.tab {
+	overflow: hidden;
+	background-color: transparent;
+	color: white;
+}
+/* Style the buttons inside the tab */
+div.tab button {
+	background-color: inherit;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	color: white;
+	padding: 14px 16px;
+	transition: 0.5s;
+	font-size: 17px;
+	border-bottom: 1px solid #7AD18A;
+}
+/* Change background color of buttons on hover */
+div.tab button:hover {
+	background-color: #ddd;
+	color: #000;
+}
+/* Create an active/current tablink class */
+div.tab button.active {
+	background-color: #ccc;
+	color: #222;
+}
+/* Style the tab content */
+.tabcontent {
+	display: none;
+	padding: 6px 12px;
+	border: 1px solid #ccc;
+	border-top: none;
+}
+#dc-individual-leaderboard,#marvel-individual-leaderboard,#got-individual-leaderboard ,#hp-individual-leaderboard  {
+	display: inline-block;
+	width: 40%;
+	margin: 6vh 4vw 6vh 8vw;
+	background-color: #FFFFFF;
+	border-top-left-radius: 15px;
+	border-top-right-radius: 15px;
+}
+#dc-individual-leaderboard-text,#marvel-individual-leaderboard-text,#got-individual-leaderboard-text,#hp-individual-leaderboard-text{
+	display: inline-block;
+	width: 90%;
+	padding: 2vw;
+	font-size: 3vh;
+	background-color: #847AD1;
+	border-top-left-radius: 15px;
+	border-top-right-radius: 15px;
+	text-align: center;
+}
+#dc-individual-leaderboard-content,#marvel-individual-leaderboard-content,#got-individual-leaderboard-content,#hp-individual-leaderboard-content  {
+	width: 100%;
+	/*padding: 3vh 2vw 3vh 2vw;*/
+}
+.dc-individual-leaderboard-wrapper,.marvel-individual-leaderboard-wrapper,.got-individual-leaderboard-wrapper,.hp-individual-leaderboard-wrapper {
+	display: table;
+	width: 90.3%;
+	padding: 2vw;
+	background-color: #7AD18A;
+}
+.dc-individual-leaderboard-wrapper:nth-child(1),.marvel-individual-leaderboard-wrapper:nth-child(1),.got-individual-leaderboard-wrapper:nth-child(1),.hp-individual-leaderboard-wrapper:nth-child(1){
+	background-color: #FEDA2C;
+}
+.dc-individual-leaderboard-wrapper:nth-child(2),.marvel-individual-leaderboard-wrapper:nth-child(2),.got-individual-leaderboard-wrapper:nth-child(2),.hp-individual-leaderboard-wrapper:nth-child(2){
+	background-color: #999999;
+}
+.dc-individual-leaderboard-wrapper:nth-child(3),.marvel-individual-leaderboard-wrapper:nth-child(3),.got-individual-leaderboard-wrapper:nth-child(3),.hp-individual-leaderboard-wrapper:nth-child(3){
+	background-color: #955A38;
+}
+.dc-individual-house-image,.marvel-individual-house-image,.got-individual-house-image,.hp-individual-house-image {
+	display: inline-block;
+	width: 6vw;
+	height: 6vw;
+	border-radius: 3vw;
+	background-color: black;
+	
+	background-repeat: no-repeat;
+	background-position: center;
+}
+.dc-individual-house-image{background-image: url(../media/dc-cards/dc-default.svg);}
+.marvel-individual-house-image {background-image: url(../media/marvel-cards/marvel-default.svg);}
+.got-individual-house-image{background-image: url(../media/got-cards/default.svg);}
+.hp-individual-house-image{background-image: url(../media/hp-cards/hp-default.svg);}
+.dc-name-house-wrapper,.marvel-name-house-wrapper,.got-name-house-wrapper,.hp-name-house-wrapper{
+	display: table-cell;
+	width: 100%;
+	padding: 1vw;
+	vertical-align: middle;
+	text-align: center;
+}
+.dc-individual-name,.marvel-individual-name,.got-individual-name,.hp-individual-name  {
+	font-size: 2.6vh;
+	color: #000000;
+}
+.dc-individual-house,.marvel-individual-house,.got-individual-house,.hp-individual-house {
+	font-size: 2.3vh;
+	color: rgba(0,0,0,0.8);
+}
+.dc-individual-points,.marvel-individual-points,.got-individual-points,.hp-individual-points {
+	display: table-cell;
+	width: 8vw;
+	vertical-align: middle;
+	text-align: center;
+}
+#dc-house-leaderboard,#marvel-house-leaderboard,#got-house-leaderboard,#hp-house-leaderboard  {
+	display: inline-block;
+	width: 40vw;
+	margin: 6vh 0vw 6vh 0vw;
+	background-color: #FFFFFF;
+	border-top-left-radius: 15px;
+	border-top-right-radius: 15px;
+}
+#dc-house-leaderboard-text,#marvel-house-leaderboard-text,#got-house-leaderboard-text,#hp-house-leaderboard-text {
+	display: inline-block;
+	width: 90%;
+	padding: 2vw;
+	font-size: 3vh;
+	background-color: #847AD1;
+	border-top-left-radius: 15px;
+	border-top-right-radius: 15px;
+	text-align: center;
+}
+#dc-house-leaderboard-content,#marvel-house-leaderboard-content,#got-house-leaderboard-content,#hp-house-leaderboard-content {
+	width: 100%;
+	background-color: rgba(0,0,0,.2);
+	/*padding: 3vh 2vw 3vh 2vw;*/
+}
+.dc-house-leaderboard-wrapper,.marvel-house-leaderboard-wrapper,.got-house-leaderboard-wrapper,.hp-house-leaderboard-wrapper {
+	display: table;
+	width: 90.3%;
+	padding: 2vw;
+	background-color: #7AD18A;
+}
+.dc-house-leaderboard-wrapper:nth-child(1),.marvel-house-leaderboard-wrapper:nth-child(1),.got-house-leaderboard-wrapper:nth-child(1),.hp-house-leaderboard-wrapper:nth-child(1) {
+	background-color: #FEDA2C;
+}
+.dc-house-leaderboard-wrapper:nth-child(2),.marvel-house-leaderboard-wrapper:nth-child(2),.got-house-leaderboard-wrapper:nth-child(2),.hp-house-leaderboard-wrapper:nth-child(2) {
+	background-color: #999999;
+}
+.dc-house-leaderboard-wrapper:nth-child(3),.marvel-house-leaderboard-wrapper:nth-child(3),.got-house-leaderboard-wrapper:nth-child(3),.hp-house-leaderboard-wrapper:nth-child(3) {
+	background-color: #955A38;
+}
+.dc-house-house-image,.marvel-house-house-image,.got-house-house-image,.hp-house-house-image {
+	display: inline-block;
+	width: 6vw;
+	height: 6vw;
+	border-radius: 3vw;
+	background-color: black;
+	
+	background-repeat: no-repeat;
+	background-position: center;
+}
+.dc-house-house-image{background-image: url(../media/dc-cards/dc-default.svg);}
+.marvel-house-house-image{background-image: url(../media/marvel-cards/marvel-default.svg);}
+.got-house-house-image{background-image: url(../media/got-cards/default.svg);}
+.hp-house-house-image{background-image: url(../media/hp-cards/hp-default.svg);}
+.dc-house-name-house-wrapper,.marvel-house-name-house-wrapper,.got-house-name-house-wrapper,.hp-house-name-house-wrapper {
+	display: table-cell;
+	width: 100%;
+	padding: 1vw;
+	vertical-align: middle;
+	text-align: center;
+}
+/*.dc-house-name {
+	font-size: 2.6vh;
+	color: #000000;
+}*/
+.dc-house-house,.marvel-house-house,.got-house-house,.hp-house-house {
+	font-size: 2.6vh;
+	color: #000000;
+}
+.dc-house-points,.marvel-house-points,.got-house-points,.hp-house-points {
+	display: table-cell;
+	width: 8vw;
+	vertical-align: middle;
+	text-align: center;
+}
+@media screen and (max-width: 768px) {
+	.toggle-leaderboard {
+		display: block;
+	}
+	.standalone-leaderboard-wrapper {
+		width: 80vw;
+	}
+	#dc-individual-leaderboard, #dc-house-leaderboard,#marvel-individual-leaderboard, #marvel-house-leaderboard,#got-individual-leaderboard, #got-house-leaderboard,#hp-individual-leaderboard, #hp-house-leaderboard {
+		width: 80%;
+		margin: 6vh 10% 6vh 10%;
+		display: none;
+	}
+	#dc-individual-leaderboard-text, #dc-house-leaderboard-text,#marvel-individual-leaderboard-text, #marvel-house-leaderboard-text,#got-individual-leaderboard-text, #got-house-leaderboard-text,#hp-individual-leaderboard-text, #hp-house-leaderboard-text  {
+		width: 94.9%;
+	}
+	.dc-individual-leaderboard-wrapper, .dc-house-leaderboard-wrapper,.marvel-individual-leaderboard-wrapper, .marvel-house-leaderboard-wrapper,.got-individual-leaderboard-wrapper, .got-house-leaderboard-wrapper, .hp-individual-leaderboard-wrapper, .hp-house-leaderboard-wrapper  {
+		width: 95%;
+	}
+	.dc-individual-house-image, .dc-house-house-image,.marvel-individual-house-image, .marvel-house-house-image,.got-individual-house-image, .got-house-house-image,.hp-individual-house-image, .hp-house-house-image{
+		width: 10vw;
+		height: 10vw;
+		border-radius: 5vw;
+	}
+	.standalone-house-image {
+		width: 16vw;
+		height: 16vw;
+		border-radius: 8vw;
+	}
+}
